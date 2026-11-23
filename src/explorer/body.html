@@ -1,0 +1,2680 @@
+
+
+  <!-- ============================================================
+       1. NAVIGATION BAR
+       Responsive header with logo, navigation links, and auth buttons
+       ============================================================ -->
+  <!-- ============================================================
+       1a. SIDEBAR NAVIGATION (logo markup is the original, unchanged)
+       ============================================================ -->
+  <a class="skip-link" href="#places">Skip to places</a>
+  <aside class="side-nav" id="sideNav" aria-label="Site navigation">
+      <button type="button" class="side-nav-close" id="sideNavClose" aria-label="Close menu">&times;</button>
+      <!-- Logo & Brand Identity -->
+      <a href="#hero" class="brand-logo" aria-label="Student Explorer Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </span>
+        <span class="logo-text">Student Explorer</span>
+      </a>
+
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+        <a href="#categories" class="nav-link"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Explore</span></a>
+        <a href="#squadTripPlanner" class="nav-link"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.5"/></svg><span>Trip Planner</span></a>
+        <a href="#places" class="nav-link" data-action="nearby"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Nearby</span></a>
+        <a href="#weeklyStudentPicks" class="nav-link"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.1 8.6 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.6 12 2"/></svg><span>Weekly Picks</span></a>
+        <a href="#achievements" class="nav-link"><span class="nav-ico" aria-hidden="true">🏅</span><span>Achievements</span></a>
+        <a href="#places" class="nav-link" data-action="wishlist"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><span>Wishlist</span></a>
+        <a href="#expense-diary" class="nav-link"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span>My Trips</span></a>
+        <a href="#" class="nav-link" data-action="profile"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Profile</span></a>
+        <button type="button" class="nav-link-btn nav-link" id="navAddPlaceLink"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Add a Place</span></button>
+        <button type="button" class="nav-link-btn nav-link" data-open-feedback><span class="nav-ico" aria-hidden="true">💬</span><span>Send Feedback</span></button>
+        <a href="#" class="nav-link nav-admin-link" id="sideAdminLink" data-action="admin" style="display:none"><svg class="nav-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/></svg><span>Admin Panel</span></a>
+      </nav>
+      <div class="side-promo">
+        <div class="side-promo-art" aria-hidden="true">🎓</div>
+        <strong>Travel more, learn more!</strong>
+        <p>Found a great spot? Add it and help the next student.</p>
+        <button type="button" class="btn btn-primary btn-sm" id="sidePromoBtn">+ Add a Place</button>
+      </div>
+  </aside>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <!-- Logo & Brand Identity -->
+      <a href="#hero" class="brand-logo brand-mobile" aria-label="Student Explorer Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </span>
+        <span class="logo-text">Student Explorer</span>
+      </a>
+
+      <form class="top-search" id="topSearchForm" role="search" onsubmit="return false;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="topSearchInput" placeholder="Search places, areas or budget…" aria-label="Search places" autocomplete="off" />
+      </form>
+      <button type="button" class="top-location" id="topLocationBtn" title="Use my live location">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><small>Your location</small><b id="topLocationText">Bengaluru</b></span>
+      </button>
+
+      <!-- Auth Action Buttons & Mobile Hamburger Button -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-theme-toggle" id="themeToggleBtn" title="Toggle dark / light mode" aria-label="Toggle theme">🌙</button>
+        <button type="button" class="btn btn-teal-outline" id="navAddPlaceBtn"><span class="btn-icon">+</span> Add Place</button>
+        <button type="button" class="btn btn-admin" id="navAdminBtn" style="display:none" title="Admin dashboard">⚙ Admin</button>
+        <div class="profile-menu-wrap" id="profileMenuWrap" style="display:none">
+          <button type="button" class="btn btn-profile" id="profileMenuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="profileMenu">
+            <span class="profile-avatar" id="profileAvatar" aria-hidden="true">👤</span>
+            <span>Profile</span>
+            <span class="profile-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="profile-menu" id="profileMenu" role="menu" aria-label="Your account" hidden>
+            <div class="profile-menu-heading">
+              <strong id="profileMenuName">Your account</strong>
+              <span id="profileMenuEmail"></span>
+              <small id="profileMenuCollege"></small>
+              <div id="profileFeaturedBadges" class="profile-featured-badges" aria-label="Featured achievement badges"></div>
+            </div>
+            <div class="profile-saved-plans" id="profileSavedPlans">
+              <div class="profile-saved-plans-title">Saved trip plans</div>
+              <div id="profileSavedPlansList" class="profile-saved-plans-list">
+                <p class="profile-saved-empty">No saved plans yet. Build one in the Trip planner and hit Save.</p>
+              </div>
+            </div>
+            <button type="button" class="profile-menu-link" id="profileOpenBtn" role="menuitem">👤 My profile</button>
+            <button type="button" class="profile-menu-link" id="profileOpenRankBtn" role="menuitem">🏆 My rank</button>
+            <button type="button" class="profile-menu-link" id="profileViewAchievementsBtn" role="menuitem">🏅 View my badges &amp; XP</button>
+            <button type="button" class="profile-logout-btn" id="profileLogoutBtn" role="menuitem">Log Out</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-ghost" id="loginBtn">Log In</button>
+        <button type="button" class="btn btn-primary" id="signupBtn">Sign Up</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================
+       2. HERO SECTION
+       Eye-catching headline, subtitle, search bar, and city banner
+       ============================================================ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+
+      <!-- Left Column: Value Proposition & Interactive Search -->
+      <div class="hero-content">
+        
+        <!-- Location Indicator with Live GPS option -->
+        <div class="hero-location-flex">
+          <div class="location-badge">
+            <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span id="heroLocationStatus">Currently exploring Bengaluru</span>
+          </div>
+          <button type="button" class="hero-gps-quick-btn" id="heroGpsBtn" title="Detect your actual live GPS location to calculate exact distances">
+            <span class="gps-pulse-dot"></span>
+            <span>📍 Detect My Live Location</span>
+          </button>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-title">Discover More.<br>Spend Less.<br><span class="hero-title-accent">Explore Together.</span></h1>
+
+        <!-- Subtitle — solution-first for first 20 seconds -->
+        <p class="hero-subtitle">
+          Where should you go with friends this weekend without spending much? Pick a budget, see real student spots near you, plan in 30 seconds, and share the plan on WhatsApp.
+        </p>
+
+        <!-- Search Bar Form -->
+        <form class="search-box" id="heroSearchForm" role="search" onsubmit="return false;">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search cafes, areas…" 
+              aria-label="Search places or budget in Bengaluru"
+              autocomplete="off"
+            />
+            <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">&times;</button>
+          </div>
+          <button type="submit" class="btn btn-primary search-btn" id="searchSubmitBtn">
+            <span>Search</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Quick Search Tags -->
+        <div class="quick-tags">
+          <span class="quick-tags-label">Try searching:</span>
+          <button type="button" class="tag-link" data-search="100">Under ₹100</button>
+          <button type="button" class="tag-link" data-search="250">Within ₹250</button>
+          <button type="button" class="tag-link" data-search="Cubbon Park">Cubbon Park</button>
+          <button type="button" class="tag-link" data-search="VV Puram">VV Puram Food</button>
+          <button type="button" class="tag-link" data-search="Food under 300">Food under 300</button>
+          <button type="button" class="tag-link" data-search="Indiranagar">Indiranagar</button>
+          <button type="button" class="tag-link" data-search="Koramangala">Koramangala</button>
+          <button type="button" class="tag-link" data-search="Jayanagar">Jayanagar</button>
+          <button type="button" class="tag-link" data-search="Whitefield">Whitefield</button>
+          <button type="button" class="tag-link" data-search="Hebbal">Hebbal</button>
+        </div>
+
+        <!-- Public activity (no private signup counts) -->
+        <div class="hero-trust-row" id="heroSocialProof">
+          <div class="trust-item">
+            <span class="trust-number" id="statPlacesCount">40+</span>
+            <span class="trust-label">Spots to explore</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item">
+            <span class="trust-number" id="statOutingsWeek">—</span>
+            <span class="trust-label">Community outings</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item">
+            <span class="trust-number">₹0–₹300</span>
+            <span class="trust-label">Student-friendly budgets</span>
+          </div>
+        </div>
+
+        <!-- Primary budget CTAs — the first thing a new visitor should click -->
+        <div class="hero-budget-chips" id="heroBudgetChips">
+          <span class="hero-chips-label">Show me places:</span>
+          <button type="button" class="hero-chip hero-chip-primary" data-collection="under300" id="heroPrimaryBudgetBtn">Under ₹300 near me</button>
+          <button type="button" class="hero-chip" data-collection="under150">Under ₹150</button>
+          <button type="button" class="hero-chip" data-collection="free">Free / almost free</button>
+          <button type="button" class="hero-chip hero-chip-surprise" id="surpriseMeBtn">🎲 Surprise me</button>
+          <button type="button" class="hero-chip" data-collection="food">Food near me</button>
+          <button type="button" class="hero-chip" data-collection="favourites">♥ Favourites</button>
+        </div>
+        <p class="hero-cta-hint" id="heroCtaHint">Tap a budget → see 3–5 strong picks → plan the outing in one click.</p>
+
+      </div>
+
+      <!-- Right Column: Admin recommendations carousel (empty until admin adds) -->
+      <div class="hero-media">
+        <div class="hero-image-card" id="heroRecCard">
+          <div class="hero-carousel" id="heroCarousel">
+            <div class="hero-carousel-empty" id="heroCarouselEmpty">
+              <span class="hero-empty-icon">🏨</span>
+              <p class="hero-empty-title">Featured recommendations</p>
+              <p class="hero-empty-sub">Admin picks will appear here with photos for every visitor.</p>
+            </div>
+            <div class="hero-carousel-track" id="heroCarouselTrack" style="display:none"></div>
+            <span class="hero-nearest-tag" id="heroNearestTag" style="display:none">📍 Nearest to you</span>
+            <div class="hero-carousel-dots" id="heroCarouselDots" style="display:none"></div>
+          </div>
+          <div class="hero-media-overlay" id="heroRecOverlay" style="display:none">
+            <span class="overlay-badge" id="heroRecBadge">Admin pick</span>
+            <h2 class="overlay-caption" id="heroRecCaption"></h2>
+            <p class="hero-rec-meta" id="heroRecMeta"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quick actions (every tile opens a real feature) -->
+  <section class="quick-tiles" aria-label="Quick actions">
+    <a href="#categories" class="quick-tile"><span class="qt-ico qt-green">📍</span><span>Top<br>Destinations</span></a>
+    <a href="#calculator" class="quick-tile"><span class="qt-ico qt-blue">₹</span><span>Budget<br>Calculator</span></a>
+    <a href="#squadTripPlanner" class="quick-tile"><span class="qt-ico qt-purple">🧭</span><span>Smart Trip<br>Planner</span></a>
+    <a href="#places" class="quick-tile" data-action="under150"><span class="qt-ico qt-orange">🎁</span><span>Student<br>Budgets</span></a>
+    <a href="#expense-diary" class="quick-tile"><span class="qt-ico qt-pink">🧾</span><span>Expense<br>Diary</span></a>
+    <a href="#" class="quick-tile" data-action="addplace"><span class="qt-ico qt-sky">➕</span><span>Add a<br>Place</span></a>
+  </section>
+
+  <section class="how-strip" aria-label="How Student Explorer works">
+    <div class="how-step"><span class="how-num">1</span><div><b>Pick your budget</b><span>Tell us what you can spend. We only show spots that fit.</span></div></div>
+    <div class="how-step"><span class="how-num">2</span><div><b>Plan with your squad</b><span>Add 2–5 stops, see the cost split per friend.</span></div></div>
+    <div class="how-step"><span class="how-num">3</span><div><b>Go &amp; share it</b><span>Get directions, then share the plan on WhatsApp.</span></div></div>
+  </section>
+
+  <!-- ============================================================
+       INSTANT PICKS — first 20-second magic for new visitors
+       ============================================================ -->
+  <section class="instant-picks-section" id="instantPicks" aria-label="Recommended outings right now">
+    <div class="instant-picks-header">
+      <div>
+        <p class="instant-eyebrow">Ready in under 30 seconds</p>
+        <h2 class="instant-title">This weekend with friends under ₹300</h2>
+        <p class="instant-sub" id="instantPicksSub">Real student-friendly spots near you. Tap any card to get directions.</p>
+      </div>
+      <div class="instant-actions">
+        <button type="button" class="btn btn-primary" id="instantPlanBtn">Plan a 2–3 stop outing</button>
+        <button type="button" class="btn btn-outline btn-sm" id="instantRefreshBtn" title="Refresh picks">↻ Refresh</button>
+      </div>
+    </div>
+    <div class="instant-picks-grid" id="instantPicksGrid">
+      <div class="instant-skeleton" aria-hidden="true"></div>
+      <div class="instant-skeleton" aria-hidden="true"></div>
+      <div class="instant-skeleton" aria-hidden="true"></div>
+      <div class="instant-skeleton" aria-hidden="true"></div>
+    </div>
+    <div class="instant-social-proof" id="instantSocialProof" style="display:none"></div>
+  </section>
+
+  <!-- ============================================================
+       3. EXPLORE CATEGORIES
+       Interactive category cards for quick filtering
+       ============================================================ -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker">Find What Fits Your Mood</span>
+        <h2 class="section-title">Explore Categories</h2>
+        <p class="section-subtitle">From peaceful garden study afternoons to evening street-food feasts with your squad.</p>
+      </div>
+
+      <div class="categories-grid">
+
+        <!-- Category 1: Cafes & Restaurants -->
+        <div class="category-card" data-category="food" role="button" tabindex="0">
+          <div class="category-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <h3 class="category-title">Cafes &amp; Restaurants</h3>
+          <p class="category-desc">Iconic filter coffee, midnight dosas, and pocket-friendly college addas.</p>
+          <span class="category-action">Explore Food &rarr;</span>
+        </div>
+
+        <!-- Category 2: Parks & Nature -->
+        <div class="category-card" data-category="nature" role="button" tabindex="0">
+          <div class="category-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"></path>
+              <path d="M7 16v6"></path>
+              <path d="M13 19v3"></path>
+              <path d="M12 19h8.3a2.7 2.7 0 0 0 .7-5.3 3 3 0 0 0-4.9-2.4 3.5 3.5 0 0 0-6.4 1.7V14"></path>
+            </svg>
+          </div>
+          <h3 class="category-title">Parks &amp; Nature</h3>
+          <p class="category-desc">Breezy canopies, heritage botanical walks, and chill picnic lawns.</p>
+          <span class="category-action">Explore Nature &rarr;</span>
+        </div>
+
+        <!-- Category 3: Tourist Attractions -->
+        <div class="category-card" data-category="attractions" role="button" tabindex="0">
+          <div class="category-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11H9V10z"></path>
+            </svg>
+          </div>
+          <h3 class="category-title">Tourist Attractions</h3>
+          <p class="category-desc">Tudor palaces, historic forts, museums, and architectural marvels.</p>
+          <span class="category-action">Explore Sights &rarr;</span>
+        </div>
+
+        <!-- Category 4: Entertainment -->
+        <div class="category-card" data-category="entertainment" role="button" tabindex="0">
+          <div class="category-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+              <path d="M6 12h4"></path>
+              <path d="M8 10v4"></path>
+              <line x1="15" y1="13" x2="15.01" y2="13"></line>
+              <line x1="18" y1="11" x2="18.01" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="category-title">Entertainment</h3>
+          <p class="category-desc">Arcade gaming, laser tag, comedy clubs, and student-discount screenings.</p>
+          <span class="category-action">Explore Hangouts &rarr;</span>
+        </div>
+
+        <!-- Category 5: Weekend Getaways -->
+        <div class="category-card" data-category="getaways" role="button" tabindex="0">
+          <div class="category-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+            </svg>
+          </div>
+          <h3 class="category-title">Weekend Getaways</h3>
+          <p class="category-desc">Sunrise road trips, scenic hill treks, and day drives just outside the city.</p>
+          <span class="category-action">Explore Trips &rarr;</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. DISCOVER WITHIN YOUR BUDGET
+       Quick budget range selector
+       ============================================================ -->
+  <section class="section budget-filter-section" id="budget-filter">
+    <div class="container">
+      
+      <div class="budget-filter-card">
+        <div class="budget-header-flex">
+          <div>
+            <span class="section-kicker">Transparent Pocket Planning</span>
+            <h2 class="section-title">Discover Within Your Budget</h2>
+            <p class="section-subtitle">Pick what you want to spend today. We will filter places that match your wallet.</p>
+          </div>
+          <button type="button" class="btn btn-secondary" id="resetBudgetFilterBtn">Show All Places</button>
+        </div>
+
+        <!-- Budget Options Chips -->
+        <div class="budget-options" id="budgetOptions">
+          <button type="button" class="budget-pill active" data-budget="all">All Budgets</button>
+          <button type="button" class="budget-pill" data-budget="under-100">Under ₹100</button>
+          <button type="button" class="budget-pill" data-budget="100-300">₹100–₹300</button>
+          <button type="button" class="budget-pill" data-budget="300-500">₹300–₹500</button>
+          <button type="button" class="budget-pill" data-budget="500-1000">₹500–₹1,000</button>
+          <button type="button" class="budget-pill" data-budget="above-1000">Above ₹1,000</button>
+        </div>
+
+        <!-- Budget Action Bar -->
+        <div class="budget-action-bar">
+          <span class="budget-status-text" id="budgetStatusText">Showing all popular places across Bengaluru</span>
+          <button type="button" class="btn btn-primary" id="findPlacesBtn">
+            <span>Find Places</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. POPULAR PLACES IN BENGALURU
+       Place cards with photo, location, category, budget, demo rating & view details
+       ============================================================ -->
+  <section class="section places-section" id="places">
+    <div class="container">
+
+      <div class="section-header-row">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Handpicked for Students</span>
+          <h2 class="section-title">Popular Places in Bengaluru</h2>
+          <p class="section-subtitle">Curated favorites with Google Maps directions, live transit costs, and peer reviews.</p>
+        </div>
+
+        <div class="section-header-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="openUploadPlaceBtn2">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>Share a Student Spot</span>
+          </button>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs" id="categoryFilterTabs" role="tablist">
+          <button type="button" class="tab-btn active" data-filter="all" role="tab">All</button>
+          <button type="button" class="tab-btn" data-filter="nature" role="tab">Nature</button>
+          <button type="button" class="tab-btn" data-filter="food" role="tab">Food</button>
+          <button type="button" class="tab-btn" data-filter="attractions" role="tab">Attractions</button>
+          <button type="button" class="tab-btn" data-filter="entertainment" role="tab">Entertainment</button>
+          <button type="button" class="tab-btn" data-filter="getaways" role="tab">Getaways</button>
+          <button type="button" class="tab-btn" data-filter="hotels" role="tab">🏨 Hotels</button>
+        </div>
+      </div>
+
+      <!-- Near you + curated collections -->
+      <div class="near-you-strip" id="nearYouStrip" style="display:none">
+        <div class="near-you-inner">
+          <span class="near-you-icon">📍</span>
+          <div>
+            <strong id="nearYouTitle">Places near you</strong>
+            <p id="nearYouSub">Allow location to sort by distance and see budget-friendly spots first.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="nearYouCta">Show nearest</button>
+        </div>
+      </div>
+
+      <div class="collection-chips-row" id="collectionChips">
+        <span class="collection-label">Collections</span>
+        <button type="button" class="collection-chip active" data-collection="all">All spots</button>
+        <button type="button" class="collection-chip" data-collection="free">Free / almost free</button>
+        <button type="button" class="collection-chip" data-collection="under150">Under ₹150</button>
+        <button type="button" class="collection-chip" data-collection="late">Best tonight</button>
+        <button type="button" class="collection-chip" data-collection="open-now">Open now (listed hours)</button>
+        <button type="button" class="collection-chip" data-collection="favourites">♥ My favourites</button>
+      </div>
+
+      <!-- Location & Transit Distance Navigator Box -->
+      <div class="transit-navigator-card" id="transitNavigator">
+        <div class="navigator-header">
+          <div class="navigator-title-group">
+            <span class="navigator-tag">Transit &amp; Distance Engine</span>
+            <h3 class="navigator-heading">Plan From Your Location in Bengaluru</h3>
+            <p class="navigator-subtext">Fares are not city-wide averages. Rapido, Namma Metro and BMTC are estimated from the start point you set here to each place. Move the pin and every fare changes.</p>
+          </div>
+        </div>
+
+        <div class="navigator-controls-grid">
+          <!-- Starting Location Input -->
+          <div class="nav-control-group">
+            <div class="control-label-flex">
+              <label for="userLocationSelect" class="control-label">Your Starting Point:</label>
+              <div class="gps-actions-group">
+                <button type="button" class="btn-detect-gps" id="detectGpsBtn" title="Detect your actual live GPS location">
+                  <span class="gps-pulse-dot"></span>
+                  <span id="gpsBtnLabel">Use My Live Location</span>
+                </button>
+              </div>
+            </div>
+            <!-- Starting Mode Toggle: Select vs Type Manually -->
+            <div class="location-mode-toggle">
+              <button type="button" class="loc-mode-btn active" id="locModePresetBtn">Select Campus / Area</button>
+              <button type="button" class="loc-mode-btn" id="locModeManualBtn">✍️ Type Location Manually</button>
+            </div>
+
+            <!-- 1. Preset Dropdown Wrapper -->
+            <div class="location-select-wrapper" id="presetSelectWrapper">
+              <span class="loc-pin-icon" aria-hidden="true">📍</span>
+              <select id="userLocationSelect" class="control-select">
+                <option value="koramangala" selected>Koramangala (Sony World / JNC)</option>
+                <option value="indiranagar">Indiranagar (100ft Road / Metro)</option>
+                <option value="christ">Christ University (Hosur Rd / Dairy Circle)</option>
+                <option value="btm">BTM Layout (2nd Stage / Water Tank)</option>
+                <option value="hsr">HSR Layout (BDA Complex)</option>
+                <option value="jayanagar">Jayanagar (4th Block Complex)</option>
+                <option value="rvce">Mysore Road (RVCE College)</option>
+                <option value="pesu">Banashankari / Ring Rd (PES University)</option>
+                <option value="bmsce">Basavanagudi (BMSCE College)</option>
+                <option value="dsce">Dayananda Sagar (DSCE Kumaraswamy Layout)</option>
+                <option value="msrit">Mathikere (Ramaiah Institute MSRIT)</option>
+                <option value="mcc">Vasanth Nagar (Mount Carmel College MCC)</option>
+                <option value="malleshwaram">Malleshwaram (8th Cross)</option>
+                <option value="bellandur">Bellandur (EcoSpace / Outer Ring Rd)</option>
+                <option value="marathahalli">Marathahalli (Bridge / Ring Road)</option>
+                <option value="whitefield">Whitefield (ITPL / Metro)</option>
+                <option value="majestic">Majestic / City Railway Station</option>
+                <option value="rajajinagar">Rajajinagar (Navrang / Metro)</option>
+                <option value="hebbal">Hebbal (Manyata Tech Park)</option>
+                <option value="kammanahalli">Kammanahalli (HRBR Layout)</option>
+                <option value="electronic-city">Electronic City (Phase 1)</option>
+                <option value="yelahanka">Yelahanka (North Bengaluru)</option>
+              </select>
+            </div>
+
+            <!-- 2. Manual Location Input Wrapper (Search / Geocode) -->
+            <div class="manual-location-box" id="manualLocationBox" style="display: none;">
+              <div class="manual-input-wrapper">
+                <span class="loc-pin-icon" aria-hidden="true">📍</span>
+                <input 
+                  type="text" 
+                  id="manualLocationInput" 
+                  class="manual-loc-input" 
+                  placeholder="Type any area, college, street or metro in Bengaluru..." 
+                  autocomplete="off"
+                />
+                <button type="button" class="btn btn-primary btn-sm manual-loc-btn" id="setManualLocBtn">
+                  <span>Calculate Distances</span>
+                </button>
+              </div>
+              <div class="manual-hints-row">
+                <span class="hints-label">Suggestions:</span>
+                <button type="button" class="manual-hint-pill" data-hint="Christ University Central Campus">Christ Univ</button>
+                <button type="button" class="manual-hint-pill" data-hint="Sarjapur Road Wipro">Sarjapur Rd</button>
+                <button type="button" class="manual-hint-pill" data-hint="Frazer Town Mosque Road">Frazer Town</button>
+                <button type="button" class="manual-hint-pill" data-hint="Kengeri Satellite Town">Kengeri</button>
+                <button type="button" class="manual-hint-pill" data-hint="Electronic City Phase 2">E-City Ph 2</button>
+              </div>
+              <div id="manualGeocodeStatus" class="manual-status-note" style="display: none;"></div>
+            </div>
+
+            <!-- Live tracking status pill -->
+            <div id="gpsTrackingStatus" class="gps-tracking-banner" style="display: none;">
+              <span class="tracking-live-dot"></span>
+              <span id="gpsTrackingText">Live tracking active</span>
+              <button type="button" class="btn-refresh-gps" id="refreshGpsBtn" title="Re-sync current GPS coordinates">↻ Refresh</button>
+            </div>
+            <!-- Quick Campus / Area Pills -->
+            <div class="quick-loc-chips">
+              <span class="chips-label">Quick select:</span>
+              <button type="button" class="loc-chip active" data-loc="koramangala">Koramangala</button>
+              <button type="button" class="loc-chip" data-loc="christ">Christ Univ</button>
+              <button type="button" class="loc-chip" data-loc="indiranagar">Indiranagar</button>
+              <button type="button" class="loc-chip" data-loc="btm">BTM</button>
+              <button type="button" class="loc-chip" data-loc="rvce">RVCE</button>
+              <button type="button" class="loc-chip" data-loc="pesu">PESU</button>
+              <button type="button" class="loc-chip" data-loc="jayanagar">Jayanagar</button>
+            </div>
+          </div>
+
+          <!-- Distance Range Filter -->
+          <div class="nav-control-group">
+            <label class="control-label">Distance Range:</label>
+            <div class="distance-range-pills" id="distanceRangePills">
+              <button type="button" class="dist-pill" data-dist="5">Within 5 km</button>
+              <button type="button" class="dist-pill" data-dist="10">Within 10 km</button>
+              <button type="button" class="dist-pill" data-dist="15">Within 15 km</button>
+              <button type="button" class="dist-pill" data-dist="25">Within 25 km</button>
+              <button type="button" class="dist-pill active" data-dist="all">Any Distance</button>
+            </div>
+            <span class="control-hint" id="distanceRangeHint">Showing places at any distance across Bengaluru</span>
+          </div>
+
+          <!-- Sort Locations -->
+          <div class="nav-control-group">
+            <label for="sortBySelect" class="control-label">Sort Places By:</label>
+            <select id="sortBySelect" class="control-select">
+              <option value="distance-asc" selected>Distance: Nearest First</option>
+              <option value="budget-asc">Outing Budget: Lowest First</option>
+              <option value="rapido-asc">Rapido Fare: Lowest First</option>
+              <option value="rating-desc">Rating: Highest First</option>
+            </select>
+            <span class="control-hint">Re-orders places dynamically</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Search / Filter Status Banner -->
+      <div id="filterNotification" class="filter-notification" style="display: none;">
+        <span id="filterNotificationText"></span>
+        <button type="button" id="clearFilterBtn" class="filter-clear-link">Reset filters</button>
+      </div>
+
+      <p class="fare-basis-banner" id="fareBasisBanner">Set your start point. Rapido, metro and bus fares are calculated from there to each place.</p>
+      <!-- Places Grid -->
+      
+      <div class="student-nudge-banner" id="studentNudgeBanner" role="status">
+        <span class="nudge-emoji">✨</span>
+        <span><strong>Your outing notes help the next student.</strong> Log expenses after a trip and leave a short review — real spends keep budgets honest for everyone.</span>
+      </div>
+
+      <section id="weeklyStudentPicks" style="margin:1.25rem 0;padding:1rem;border:1px solid #E2E8F0;border-radius:16px;background:#FFFFFF">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h2 style="font-size:1.15rem;font-weight:800;margin:0">Weekly student picks</h2>
+            <p class="form-helper" style="margin:.25rem 0 .6rem">Fresh this week — places students actually reviewed or verified. Real notes, real budgets.</p>
+          </div>
+          <div style="display:flex;gap:.4rem;align-items:center">
+            <input id="studentPicksArea" class="calc-input" placeholder="Search place or area (spelling needn't be exact)" aria-label="Search weekly picks by place or area" autocomplete="off" style="max-width:260px">
+            <button type="button" class="btn btn-outline btn-sm" id="refreshStudentPicksBtn">Find</button>
+          </div>
+        </div>
+        <div id="weeklyStudentPicksNote" class="form-helper" style="margin:0 0 .5rem;display:none"></div>
+        <div id="weeklyStudentPicksList" class="form-helper">Loading this week's picks…</div>
+      </section>
+
+      <section id="squadTripPlanner" class="trip-planner-panel" style="margin:1.25rem 0;padding:1rem;border:1px solid #DCE7E5;border-radius:16px;background:#F8FCFB">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h2 style="font-size:1.15rem;font-weight:800;margin:0">Plan a squad trip in 30 seconds</h2>
+            <p class="form-helper" style="margin:.25rem 0 .75rem">Pick 2–3 stops + per-person budget → get a clean WhatsApp message your friends will actually open.</p>
+          </div>
+          <div style="display:flex;gap:.65rem;flex-wrap:wrap">
+            <label style="font-size:.82rem;font-weight:650">Friends
+              <input id="tripPlanPeople" type="number" min="1" max="25" value="4" style="display:block;width:5rem;margin-top:.25rem;padding:.45rem;border:1px solid #CBD5E1;border-radius:8px">
+            </label>
+            <label style="font-size:.82rem;font-weight:650">Budget cap / person (₹)
+              <input id="tripPlanBudgetLimit" type="number" min="0" max="100000" step="50" placeholder="e.g. 500" style="display:block;width:8rem;margin-top:.25rem;padding:.45rem;border:1px solid #CBD5E1;border-radius:8px">
+            </label>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem">
+          <label class="form-helper">Stop 1<select id="tripPlanStop1" class="calc-input" style="display:block;width:100%;margin-top:.25rem"><option value="">Choose a place</option></select></label>
+          <label class="form-helper">Stop 2<select id="tripPlanStop2" class="calc-input" style="display:block;width:100%;margin-top:.25rem"><option value="">Choose a place</option></select></label>
+          <label class="form-helper">Stop 3 (optional)<select id="tripPlanStop3" class="calc-input" style="display:block;width:100%;margin-top:.25rem"><option value="">No third stop</option></select></label>
+        </div>
+        <div id="tripPlanSummary" class="form-helper" style="margin:.75rem 0">Choose at least two stops to calculate your group budget.</div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <button type="button" class="btn btn-primary btn-sm" id="shareTripPlanBtn">📲 Share plan + invite friends</button>
+          <button type="button" class="btn btn-outline btn-sm" id="inviteSquadBtn" title="Friends who join and verify the stops earn XP too">👥 Invite squad + XP</button>
+          <button type="button" class="btn btn-outline btn-sm" id="saveTripPlanBtn">Save this plan</button>
+        </div>
+        <div id="tripPlanStatus" class="plan-status" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <div class="places-grid" id="placesGrid">
+        
+        <!-- Place 1: Lalbagh Botanical Garden -->
+        <article class="place-card" data-id="lalbagh" data-category="nature" data-time="morning" data-vibes="morning,day,nature" data-budget="under-100" data-min="30" data-max="70" data-lat="12.9507" data-lng="77.5848" data-rating="4.7" data-name="Lalbagh Botanical Garden">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">4.5 km</strong> away</span>
+            <img 
+              src="/src/assets/images/lalbagh_glasshouse_1794295760242.jpg" 
+              alt="Lalbagh Botanical Garden Glass House with vibrant flower beds" 
+              class="place-img"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <span class="place-category-badge">Parks &amp; Nature</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Mavalli, South Bengaluru</span>
+            </div>
+            <h3 class="place-name">Lalbagh Botanical Garden</h3>
+            <p class="place-desc">Century-old glasshouse, 240 acres of exotic trees, and peaceful morning walks with classmates.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">₹30 – ₹70</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="lalbagh" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.7</span>
+                  <span class="reviews-count-tag">(24 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">4.5 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Quick transit</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Rapido Bike Taxi for solo rider">
+                  <span class="transit-mode-name">🏍️ Rapido</span>
+                  <span class="transit-fare rapido-fare">~₹65</span>
+                  <span class="transit-sub">Solo rider</span>
+                </div>
+                <div class="transit-option-item" title="Uber Auto (Split by friends)">
+                  <span class="transit-mode-name">🛺 Uber Auto</span>
+                  <span class="transit-fare uber-fare">~₹105</span>
+                  <span class="transit-sub">~₹35/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="Namma Metro / BMTC Bus">
+                  <span class="transit-mode-name">🚇 Public Transit</span>
+                  <span class="transit-fare metro-fare">₹20–₹25</span>
+                  <span class="transit-sub">Student token</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>Lalbagh Metro (Green Line - 150m)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="lalbagh" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="lalbagh">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="lalbagh" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="lalbagh" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Place 2: Cubbon Park -->
+        <article class="place-card" data-id="cubbon" data-category="nature" data-time="morning" data-vibes="morning,day,nature" data-budget="under-100" data-min="0" data-max="50" data-lat="12.9763" data-lng="77.5929" data-rating="4.8" data-name="Cubbon Park">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">5.8 km</strong> away</span>
+            <img 
+              src="/src/assets/images/cubbon_park_greenery_1794295761517.jpg" 
+              alt="Cubbon Park shaded tree avenue with students strolling" 
+              class="place-img"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <span class="place-category-badge">Parks &amp; Nature</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Kasturba Road, Central Bengaluru</span>
+            </div>
+            <h3 class="place-name">Cubbon Park</h3>
+            <p class="place-desc">The green lung of the city. Perfect for reading, acoustic guitar jams, weekend frisbee, and morning jogs.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">Free (₹0 – ₹50 snacks)</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="cubbon" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.8</span>
+                  <span class="reviews-count-tag">(32 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">5.8 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Heart of City</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Rapido Bike Taxi for solo rider">
+                  <span class="transit-mode-name">🏍️ Rapido</span>
+                  <span class="transit-fare rapido-fare">~₹75</span>
+                  <span class="transit-sub">Solo rider</span>
+                </div>
+                <div class="transit-option-item" title="Uber Auto (Split by friends)">
+                  <span class="transit-mode-name">🛺 Uber Auto</span>
+                  <span class="transit-fare uber-fare">~₹120</span>
+                  <span class="transit-sub">~₹40/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="Namma Metro / BMTC Bus">
+                  <span class="transit-mode-name">🚇 Public Transit</span>
+                  <span class="transit-fare metro-fare">₹20–₹25</span>
+                  <span class="transit-sub">Student token</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>Cubbon Park Metro (Purple Line - 100m)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="cubbon" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="cubbon">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="cubbon" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="cubbon" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Place 3: VV Puram Food Street -->
+        <article class="place-card" data-id="vvpuram" data-category="food" data-time="evening-night" data-vibes="evening,night,food,street-food" data-budget="100-300" data-min="120" data-max="250" data-lat="12.9515" data-lng="77.5768" data-rating="4.6" data-name="VV Puram Food Street">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">5.2 km</strong> away</span>
+            <img 
+              src="/src/assets/images/vv_puram_food_street_1794295762371.jpg" 
+              alt="Hot butter masala dosa on tawa at VV Puram Food Street in Bengaluru" 
+              class="place-img"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <span class="place-category-badge">Cafes &amp; Restaurants</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Sajjan Rao Circle, VV Puram</span>
+            </div>
+            <h3 class="place-name">VV Puram Food Street</h3>
+            <p class="place-desc">Bengaluru's legendary vegetarian food lane. Hot paddus, congress buns, butter masala dosas &amp; rasgulla chaat.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">₹150 – ₹250</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="vvpuram" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.6</span>
+                  <span class="reviews-count-tag">(45 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">5.2 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Evening Hotspot</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Rapido Bike Taxi for solo rider">
+                  <span class="transit-mode-name">🏍️ Rapido</span>
+                  <span class="transit-fare rapido-fare">~₹70</span>
+                  <span class="transit-sub">Solo rider</span>
+                </div>
+                <div class="transit-option-item" title="Uber Auto (Split by friends)">
+                  <span class="transit-mode-name">🛺 Uber Auto</span>
+                  <span class="transit-fare uber-fare">~₹115</span>
+                  <span class="transit-sub">~₹38/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="Namma Metro / BMTC Bus">
+                  <span class="transit-mode-name">🚇 Public Transit</span>
+                  <span class="transit-fare metro-fare">₹20–₹30</span>
+                  <span class="transit-sub">Student token</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>National College Metro (Green Line - 600m walk)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="vvpuram" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="vvpuram">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="vvpuram" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="vvpuram" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Place 4: Bengaluru Palace -->
+        <article class="place-card" data-id="palace" data-category="attractions" data-time="day" data-vibes="day,attractions" data-budget="300-500" data-min="250" data-max="450" data-lat="12.9988" data-lng="77.5921" data-rating="4.5" data-name="Bengaluru Palace">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">8.4 km</strong> away</span>
+            <img 
+              src="/src/assets/images/bengaluru_palace_facade_1794295762175.jpg" 
+              alt="Grand exterior of Bangalore Palace with Tudor style architecture" 
+              class="place-img"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <span class="place-category-badge">Tourist Attractions</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Vasanth Nagar, Central Bengaluru</span>
+            </div>
+            <h3 class="place-name">Bengaluru Palace</h3>
+            <p class="place-desc">Tudor-style royal architecture, expansive ballroom lawns, vintage wood carvings, and royal history.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">₹250 – ₹450</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="palace" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.5</span>
+                  <span class="reviews-count-tag">(19 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">8.4 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Heritage Site</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Rapido Bike Taxi for solo rider">
+                  <span class="transit-mode-name">🏍️ Rapido</span>
+                  <span class="transit-fare rapido-fare">~₹105</span>
+                  <span class="transit-sub">Solo rider</span>
+                </div>
+                <div class="transit-option-item" title="Uber Auto (Split by friends)">
+                  <span class="transit-mode-name">🛺 Uber Auto</span>
+                  <span class="transit-fare uber-fare">~₹165</span>
+                  <span class="transit-sub">~₹55/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="Namma Metro / BMTC Bus">
+                  <span class="transit-mode-name">🚇 Public Transit</span>
+                  <span class="transit-fare metro-fare">₹25–₹35</span>
+                  <span class="transit-sub">Bus/Metro+Auto</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>Cantonment / Mekhri Circle Bus Stop (600m)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="palace" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="palace">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="palace" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="palace" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Place 5: Church Street & Blossom Book House -->
+        <article class="place-card" data-id="churchstreet" data-category="food" data-time="evening-night" data-vibes="evening,night,food,hangout" data-budget="100-300" data-min="100" data-max="300" data-lat="12.9750" data-lng="77.6066" data-rating="4.9" data-name="Church Street and Book Cafes">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">5.4 km</strong> away</span>
+            <div class="place-media-graphic bg-church">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Church Street Vibes</span>
+            </div>
+            <span class="place-category-badge">Cafes &amp; Street Art</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Church Street, Off MG Road</span>
+            </div>
+            <h3 class="place-name">Church Street Book &amp; Cafe Lane</h3>
+            <p class="place-desc">Cobblestone street walking, thrift books at Blossom, street buskers, artisanal gelato, and indie tea spots.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">₹100 – ₹300</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="churchstreet" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.9</span>
+                  <span class="reviews-count-tag">(56 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">5.4 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Direct Metro</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Rapido Bike Taxi for solo rider">
+                  <span class="transit-mode-name">🏍️ Rapido</span>
+                  <span class="transit-fare rapido-fare">~₹72</span>
+                  <span class="transit-sub">Solo rider</span>
+                </div>
+                <div class="transit-option-item" title="Uber Auto (Split by friends)">
+                  <span class="transit-mode-name">🛺 Uber Auto</span>
+                  <span class="transit-fare uber-fare">~₹118</span>
+                  <span class="transit-sub">~₹39/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="Namma Metro / BMTC Bus">
+                  <span class="transit-mode-name">🚇 Public Transit</span>
+                  <span class="transit-fare metro-fare">₹20–₹25</span>
+                  <span class="transit-sub">Purple Line</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>MG Road Metro Station (Purple Line - 150m)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="churchstreet" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="churchstreet">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="churchstreet" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="churchstreet" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Place 6: Nandi Hills Sunrise Drive -->
+        <article class="place-card" data-id="nandihills" data-category="getaways" data-time="morning" data-vibes="morning,sunrise,getaway" data-budget="300-500" data-min="350" data-max="600" data-lat="13.3702" data-lng="77.6835" data-rating="4.6" data-name="Nandi Hills Sunrise Drive">
+          <div class="place-media">
+            <span class="card-distance-tag"><span class="dist-icon">📍</span> <strong class="card-top-dist">58 km</strong> away</span>
+            <div class="place-media-graphic bg-nandi">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+              </svg>
+              <span>Weekend Sunrise Roadtrip</span>
+            </div>
+            <span class="place-category-badge">Weekend Getaways</span>
+          </div>
+          <div class="place-body">
+            <div class="place-location-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Chikkaballapur (60 km from City)</span>
+            </div>
+            <h3 class="place-name">Nandi Hills Sunrise Viewpoint</h3>
+            <p class="place-desc">Sea of clouds at dawn, Tipu's Drop, brisk morning wind, and shared carpooling or bike convoys with friends.</p>
+            
+            <div class="place-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Est. Budget / Person</span>
+                <span class="meta-value font-highlight">₹350 – ₹600</span>
+              </div>
+              <div class="meta-item text-right">
+                <span class="meta-label">Reviews &amp; Rating</span>
+                <button type="button" class="place-rating-pill open-reviews-btn" data-place-id="nandihills" title="Read student reviews">
+                  <span class="star-icon">★</span>
+                  <span class="rating-val">4.6</span>
+                  <span class="reviews-count-tag">(38 reviews)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transit & Distance Strip -->
+            <div class="transit-info-box">
+              <div class="transit-distance-header">
+                <span class="transit-dist-badge"><span class="loc-icon">📍</span> <strong class="place-dist-val">58 km</strong> from <span class="user-loc-name">Koramangala</span></span>
+                <span class="transit-tag-pill">Day Roadtrip</span>
+              </div>
+              <div class="transit-options-grid">
+                <div class="transit-option-item" title="Personal / Rented Bike">
+                  <span class="transit-mode-name">🏍️ Bike Fuel</span>
+                  <span class="transit-fare rapido-fare">~₹220</span>
+                  <span class="transit-sub">2-wheel convoy</span>
+                </div>
+                <div class="transit-option-item" title="Uber Intercity / Zoomcar split 4 ways">
+                  <span class="transit-mode-name">🚗 Shared Cab</span>
+                  <span class="transit-fare uber-fare">~₹1,100</span>
+                  <span class="transit-sub">~₹275/friend</span>
+                </div>
+                <div class="transit-option-item highlight-metro" title="KSRTC Direct Outstation Bus">
+                  <span class="transit-mode-name">🚌 KSRTC Bus</span>
+                  <span class="transit-fare metro-fare">₹90–₹120</span>
+                  <span class="transit-sub">Majestic direct</span>
+                </div>
+              </div>
+              <div class="nearest-stop-row">
+                <span class="stop-icon">🚉</span>
+                <span class="nearest-stop-text">Nearest Stop: <strong>KSRTC Majestic to Nandi Hills Direct Bus (Departs 8:30 AM)</strong></span>
+              </div>
+            </div>
+
+            <div class="place-footer">
+              <button type="button" class="btn btn-primary btn-sm get-directions-btn" data-place-id="nandihills" title="Open directions (Google Maps)">
+                <span class="btn-icon">🗺️</span> Directions
+              </button>
+<button type="button" class="btn btn-outline btn-sm view-details-btn" data-place-id="nandihills">Reviews &amp; Info</button>
+              <button type="button" class="btn btn-verify-visit btn-sm verify-visit-btn" data-place-id="nandihills" title="Verify that you are at this destination">✓ Verify visit</button>
+              <button type="button" class="btn btn-secondary btn-sm log-expense-btn" data-place-id="nandihills" title="Record your trip expenses">Log Expenses</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty State (When search returns 0 results) -->
+      <div id="noResultsState" class="empty-state" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <h3>No matching places found</h3>
+        <p id="didYouMeanLine" class="se-dym" style="display:none"></p>
+        <p>Try another keyword — or <strong>add this spot yourself</strong> so other students can find it.</p>
+        <div class="empty-state-actions">
+          <button type="button" class="btn btn-primary" id="emptyContributeBtn">+ Contribute this place</button>
+          <button type="button" class="btn btn-outline" id="resetSearchBtn">Clear Search &amp; Filters</button>
+          <button type="button" class="btn btn-outline" data-open-feedback data-feedback-kind="place">💬 Tell us what you were looking for</button>
+        </div>
+      </div>
+
+      <!-- Disclaimer notice required by instructions -->
+      <p class="data-disclaimer">
+        * <strong>Note:</strong> Ratings and budget ranges shown are indicative student estimates provided for planning purposes. They are demo figures and do not represent verified commercial quotes.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. BUDGET CALCULATOR PREVIEW
+       Interactive group budget splitting calculator
+       ============================================================ -->
+  <section class="section calculator-section" id="calculator">
+    <div class="container">
+      
+      <div class="calculator-grid">
+
+        <!-- Left: Explanatory & Presets -->
+        <div class="calculator-info">
+          <span class="section-kicker">Interactive Outing Tool</span>
+          <h2 class="section-title">Squad Budget Calculator</h2>
+          <p class="calculator-desc">
+            Planning a weekend outing with college friends? Don't let awkward bill calculations ruin the fun. Put in your estimates and see your group total and per-person cost instantly.
+          </p>
+
+          <div class="calc-presets">
+            <span class="calc-presets-title">Or try a popular quick preset:</span>
+            <div class="preset-buttons">
+              <button type="button" class="preset-chip" data-preset="street-food">Evening Street Food Run (4 friends)</button>
+              <button type="button" class="preset-chip" data-preset="park-day">Cubbon Park Chill &amp; Chai (3 friends)</button>
+              <button type="button" class="preset-chip" data-preset="palace-tour">Palace &amp; Museum Tour (5 friends)</button>
+            </div>
+          </div>
+
+          <div class="calculator-tip-card">
+            <div class="tip-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div>
+              <strong>Student Transit Tip:</strong> Bus and metro fares stay the same at peak hours, while autos (+50% at night) and bike taxis cost more. A Namma Metro smart card is also 5-10% cheaper than tokens.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Calculator Card -->
+        <div class="calculator-card">
+          <form id="budgetCalculatorForm" class="calculator-form" onsubmit="return false;">
+            
+            <div class="calc-form-row">
+              <label for="numPeople" class="calc-label">
+                <span>Number of Friends in Group</span>
+                <span class="calc-input-hint" id="peopleCountDisplay">4 students</span>
+              </label>
+              <div class="people-counter-wrapper">
+                <button type="button" class="counter-btn" id="decrementPeopleBtn" aria-label="Decrease number of people">-</button>
+                <input type="number" id="numPeople" class="calc-input num-people-input" value="4" min="1" max="25" step="1" required />
+                <button type="button" class="counter-btn" id="incrementPeopleBtn" aria-label="Increase number of people">+</button>
+              </div>
+            </div>
+
+            <!-- v17: auto-fill from a real place, with real Bengaluru fares -->
+            <div class="calc-autofill" id="calcAutofill">
+              <div class="calc-autofill-title">⚡ Auto-fill from a place <span class="calc-opt">(optional)</span></div>
+              <div class="calc-autofill-row">
+                <label class="calc-mini"><span>Where to?</span>
+                  <select id="calcPlaceSelect" class="calc-input"><option value="">Choose a place…</option></select></label>
+                <label class="calc-mini"><span>Travel by</span>
+                  <select id="calcModeSelect" class="calc-input">
+                    <option value="cheapest">Cheapest option</option>
+                    <option value="metro">Namma Metro</option>
+                    <option value="bus">BMTC bus</option>
+                    <option value="auto">Auto (3 per auto)</option>
+                    <option value="bike">Bike taxi (1 each)</option>
+                  </select></label>
+              </div>
+              <label class="calc-check"><input type="checkbox" id="calcRoundTrip" checked /> Round trip (going + coming back)</label>
+              <div id="calcModeCompare" class="calc-compare" aria-live="polite" hidden></div>
+            </div>
+
+            <div class="calc-inputs-grid">
+              <!-- Transport Cost -->
+              <div class="calc-field">
+                <label for="costTransport" class="calc-label">Group Transport (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="costTransport" class="calc-input" value="320" min="0" step="10" placeholder="0" />
+                </div>
+                <span class="field-help">Metro, auto or fuel</span>
+              </div>
+
+              <!-- Food & Refreshments -->
+              <div class="calc-field">
+                <label for="costFood" class="calc-label">Food &amp; Snacks (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="costFood" class="calc-input" value="680" min="0" step="10" placeholder="0" />
+                </div>
+                <span class="field-help">Chai, dosas, snacks</span>
+              </div>
+
+              <!-- Entry Tickets -->
+              <div class="calc-field">
+                <label for="costEntry" class="calc-label">Total Entry Fees (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="costEntry" class="calc-input" value="160" min="0" step="5" placeholder="0" />
+                </div>
+                <span class="field-help">Park / museum passes</span>
+              </div>
+
+              <!-- Other Expenses -->
+              <div class="calc-field">
+                <label for="costOther" class="calc-label">Buffer / Other (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="costOther" class="calc-input" value="100" min="0" step="10" placeholder="0" />
+                </div>
+                <span class="field-help">Parking, water, tips</span>
+              </div>
+            </div>
+
+            <!-- Calculation Results Box -->
+            <div class="calc-result-box">
+              <div class="result-row">
+                <div class="result-col">
+                  <span class="result-label">Total Group Cost</span>
+                  <span class="result-number" id="totalGroupCost">₹1,260</span>
+                </div>
+                <div class="result-divider" aria-hidden="true"></div>
+                <div class="result-col highlight">
+                  <span class="result-label">Estimated Cost / Person</span>
+                  <span class="result-number text-teal" id="costPerPerson">₹315</span>
+                </div>
+              </div>
+              <div class="calc-budget-row">
+                <label for="calcBudgetCap" class="calc-mini"><span>My budget per person (₹)</span></label>
+                <input type="number" id="calcBudgetCap" class="calc-input" value="300" min="0" step="10" inputmode="numeric" />
+              </div>
+              <p class="calc-budget-status" id="calcBudgetStatus" role="status" aria-live="polite"></p>
+              <p class="calc-estimate-disclaimer">
+                * Estimate. Fares use Bengaluru auto meter, Namma Metro slabs and typical bike-taxi / BMTC rates; confirm in the app before you travel.
+              </p>
+            </div>
+
+            <div class="calc-share-row">
+              <button type="button" class="btn btn-primary" id="calcShareBtn">📲 Send split to friends</button>
+              <button type="button" class="btn btn-outline" id="calcCopyBtn">📋 Copy</button>
+            </div>
+
+            <button type="button" class="btn btn-outline btn-block" id="resetCalculatorBtn">Reset to Defaults</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. POST-TRIP EXPENSE DIARY
+       Log outing expenses after every trip
+       ============================================================ -->
+  <section class="section expense-diary-section" id="expense-diary">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker">Post-Outing Tracker</span>
+        <h2 class="section-title">What Were Your Outing Expenses?</h2>
+        <p class="section-subtitle">
+          Just got back from an outing with your college squad? Log what you actually spent on Rapido, Uber, Metro, and street food to manage your monthly pocket money.
+        </p>
+      </div>
+
+      <div class="expense-diary-grid">
+
+        <!-- Left: Interactive Trip Expense Form -->
+        <div class="expense-form-card">
+          <div class="expense-card-header">
+            <span class="expense-card-icon" aria-hidden="true">📝</span>
+            <div>
+              <h3 class="expense-card-title">Log a New Outing</h3>
+              <p class="expense-card-subtitle">Fill in what your group spent and see your split share.</p>
+            </div>
+          </div>
+
+          <form id="tripExpenseForm" class="trip-form" onsubmit="return false;">
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="expensePlaceSelect" class="form-label">Place Visited</label>
+                <select id="expensePlaceSelect" class="calc-input select-input" required>
+                  <option value="">— Select a place from our list —</option>
+                  <option value="Lalbagh Botanical Garden">Lalbagh Botanical Garden</option>
+                  <option value="Cubbon Park">Cubbon Park</option>
+                  <option value="VV Puram Food Street">VV Puram Food Street</option>
+                  <option value="Bengaluru Palace">Bengaluru Palace</option>
+                  <option value="Church Street & Book Cafes">Church Street &amp; Book Cafes</option>
+                  <option value="Nandi Hills Sunrise">Nandi Hills Sunrise</option>
+                  <option value="__new__">➕ New place (not in our database yet)</option>
+                </select>
+                <span class="form-helper" id="expensePlaceHelper" style="display:none;margin-top:.4rem;font-size:.78rem;color:#4338CA;font-weight:600;"></span>
+              </div>
+
+              <div class="form-group" id="customPlaceGroup" style="display: none;">
+                <label for="customPlaceName" class="form-label">New place name</label>
+                <input type="text" id="customPlaceName" class="calc-input" placeholder="e.g. Wonderla, Commercial Street" />
+                <div class="new-place-prompt" id="newPlacePromptBox" style="margin-top:.65rem;padding:.75rem .9rem;background:linear-gradient(160deg,#FFF7ED,#fff);border:1px solid #FED7AA;border-radius:12px;">
+                  <p style="margin:0 0 .5rem;font-size:.82rem;color:#9A3412;font-weight:600;line-height:1.4;">
+                    This place isn’t in our database yet. Please add it so other students can discover it and get budget estimates.
+                  </p>
+                  <button type="button" class="btn btn-primary btn-sm" id="expenseAddPlaceBtn">Add this place to Student Explorer</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="expenseDate" class="form-label">Outing Date</label>
+                <input type="date" id="expenseDate" class="calc-input" required />
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="expenseTransitMode" class="form-label">Transport Mode Used</label>
+                <select id="expenseTransitMode" class="calc-input select-input">
+                  <option value="Rapido Bike Taxi">🏍️ Rapido Bike Taxi</option>
+                  <option value="Uber Auto">🛺 Uber Auto</option>
+                  <option value="Uber / Ola Cab">🚗 Uber / Ola Cab</option>
+                  <option value="Namma Metro">🚇 Namma Metro</option>
+                  <option value="BMTC Bus">🚌 BMTC Bus</option>
+                  <option value="Personal Bike / Fuel">🛵 Personal Bike / Fuel</option>
+                  <option value="Walking">🚶 Walking</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="expenseNumPeople" class="form-label">Squad Members Sharing</label>
+                <input type="number" id="expenseNumPeople" class="calc-input" min="1" max="25" value="3" required />
+              </div>
+            </div>
+
+            <!-- Spending Breakdown Fields -->
+            <div class="spending-fields-grid">
+              <div class="calc-field">
+                <label for="expenseTransitCost" class="calc-label">Transport (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="expenseTransitCost" class="calc-input" placeholder="0" value="120" min="0" step="10" />
+                </div>
+              </div>
+
+              <div class="calc-field">
+                <label for="expenseFoodCost" class="calc-label">Food &amp; Snacks (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="expenseFoodCost" class="calc-input" placeholder="0" value="350" min="0" step="10" />
+                </div>
+              </div>
+
+              <div class="calc-field">
+                <label for="expenseEntryCost" class="calc-label">Entry Tickets (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="expenseEntryCost" class="calc-input" placeholder="0" value="60" min="0" step="5" />
+                </div>
+              </div>
+
+              <div class="calc-field">
+                <label for="expenseMiscCost" class="calc-label">Other / Parking (₹)</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="expenseMiscCost" class="calc-input" placeholder="0" value="30" min="0" step="5" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Realtime Share Calculation Box -->
+            <div class="live-expense-preview">
+              <div class="expense-calc-stat">
+                <span class="exp-label">Total Outing Cost:</span>
+                <span class="exp-val" id="liveTotalTripCost">₹560</span>
+              </div>
+              <div class="expense-calc-stat text-teal">
+                <span class="exp-label">Your Per-Person Share:</span>
+                <span class="exp-val" id="livePerPersonShare">₹187</span>
+              </div>
+            </div>
+
+            <!-- Student Review Note -->
+            <div class="form-group">
+              <label for="expenseNote" class="form-label">Outing Highlight / Tip (Optional)</label>
+              <input type="text" id="expenseNote" class="calc-input" placeholder="e.g. Butter masala dosa at VB Bakery was 10/10, metro was super fast!" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="saveExpenseBtn">
+              <span>Save Outing to Expense Diary</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Recent Trip Ledger & Metrics — professional card -->
+        <div class="expense-ledger-card">
+          <div class="ledger-header">
+            <div>
+              <span class="section-kicker">Personal Expense Diary</span>
+              <h3 class="expense-card-title">Your Outing History</h3>
+              <p class="ledger-sub" id="ledgerSub">Private to your logged-in email · synced across sessions</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="clearAllExpensesBtn">Clear all</button>
+          </div>
+
+          <div class="monthly-metrics-strip">
+            <div class="metric-pill"><span class="metric-label">Total spent</span><span class="metric-value font-highlight" id="statTotalSpent">₹0</span></div>
+            <div class="metric-pill"><span class="metric-label">Outings</span><span class="metric-value" id="statTripsCount">0</span></div>
+            <div class="metric-pill"><span class="metric-label">Avg / outing</span><span class="metric-value" id="statAvgSpent">₹0</span></div>
+          </div>
+
+          <div class="logged-trips-container" id="loggedTripsList"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. WHY STUDENT EXPLORER?
+       Four student-centric value propositions
+       ============================================================ -->
+  <section class="section why-section" id="why-us">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-kicker">Built For College Life</span>
+        <h2 class="section-title">Why Student Explorer?</h2>
+        <p class="section-subtitle">We believe having unforgettable experiences with your friends shouldn't cost half your monthly allowance.</p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <!-- Benefit 1 -->
+        <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h3 class="benefit-title">Student-Friendly Budgets</h3>
+          <p class="benefit-text">Every single listing is curated with real student budgets in mind, highlighting free entries and low-cost hours.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h3 class="benefit-title">Real Student Experiences</h3>
+          <p class="benefit-text">No commercial hype. Handpicked recommendations from college students who actually study and hang out here.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h3 class="benefit-title">Honest Spending Information</h3>
+          <p class="benefit-text">Clear breakdowns of metro routes, food costs, ticket concessions, and hidden locker or parking charges.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h3 class="benefit-title">Easy Group Outing Planning</h3>
+          <p class="benefit-text">Interactive split-calculators and squad filters so your friend group can agree on a plan in under 2 minutes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACHIEVEMENTS / BADGES (above footer)
+       ============================================================ -->
+  <section class="section achievements-section" id="achievements" aria-labelledby="achievementsTitle">
+    <div class="container">
+      <div class="achievement-hero">
+        <div><span class="section-kicker">Your explorer journey</span><h2 class="section-title" id="achievementsTitle">Every outing earns a story.</h2><p class="section-subtitle">Collect XP, unlock badges and celebrate real-world discoveries around Bengaluru.</p></div>
+        <div class="achievement-xp-card"><span class="xp-eyebrow">YOUR XP</span><strong id="achievementXp">—</strong><span id="achievementLevel">Log in to start your journey</span><div class="xp-track"><i id="achievementXpBar"></i></div><small id="achievementNextLevel">Verified visits earn 30 XP</small></div>
+      </div>
+      <div class="achievement-stats" id="achievementStats"><div><strong>—</strong><span>Verified visits</span></div><div><strong>12</strong><span>Achievements</span></div><div><strong>3</strong><span>Showcase slots</span></div></div>
+      <div class="achievement-heading-row"><div><span class="section-kicker">Collectibles</span><h3 class="section-title">Your badge collection</h3></div><span class="achievement-legend">Bronze · Silver · Gold · Diamond</span></div>
+      <div class="achievement-grid" id="achievementGrid"><div class="achievement-loading">Log in to load your achievement collection.</div></div>
+      <div class="monthly-challenge-wrap"><div class="achievement-heading-row"><div><span class="section-kicker">Monthly mission</span><h3 class="section-title">Explore challenge</h3></div></div><div id="monthlyChallengeList" class="monthly-challenge-list"><div class="achievement-loading">Log in to join this month's challenge.</div></div></div>
+      <div class="achievement-history" id="achievementHistory"><h3>Recent XP activity</h3><p>Earn XP through verified visits and community contributions.</p></div>
+      <p class="achievement-footnote">Visit verification uses a one-time location check while you are at a destination. Student Explorer never tracks your location in the background. GPS checks are a practical deterrent, not proof against spoofed device locations.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. FOOTER
+       Links, student outreach, copyright and legal modals
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand & Mission -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </span>
+            <span class="logo-text">Student Explorer</span>
+          </a>
+          <p class="footer-tagline">Discover More. Spend Less. Explore Together.</p>
+          <p class="footer-about-text">
+            Student Explorer is a travel discovery platform that makes outings easy, transparent and affordable for students, professionals and visitors across Bengaluru.
+          </p>
+        </div>
+
+        <!-- Column 2: Explore Places -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore Places</h4>
+          <ul class="footer-links">
+            <li><a href="#places" data-category="nature">Parks &amp; Gardens</a></li>
+            <li><a href="#places" data-category="food">Budget Cafes &amp; Street Food</a></li>
+            <li><a href="#places" data-category="attractions">Historic Monuments &amp; Palaces</a></li>
+            <li><a href="#places" data-category="entertainment">Arcades &amp; Squad Hangouts</a></li>
+            <li><a href="#places" data-category="getaways">Weekend Sunrise Road Trips</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#categories">Explore Categories</a></li>
+            <li><a href="#budget-filter">Discover By Budget</a></li>
+            <li><a href="#calculator">Budget Calculator</a></li>
+            <li><a href="#why-us">Why Student Explorer</a></li>
+            <li><a href="#achievements">Badges &amp; XP</a></li>
+            <li><a href="#" data-open-feedback>💬 Send feedback</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Campus Community -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Campus</h4>
+          <p class="footer-contact-item">
+            <strong>Headquarters:</strong> Bengaluru, Karnataka, India
+          </p>
+          <p class="footer-contact-item">
+            <strong>Campus Inquiries:</strong> <a href="mailto:hello@studentexplorer.in">hello@studentexplorer.in</a>
+          </p>
+          <div class="footer-socials">
+            <span class="social-label">Join Student Community:</span>
+            <div class="social-icons">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Student Explorer on Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Student Explorer on LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Student Explorer on X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Student Explorer Discord Community">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="12" r="1"></circle>
+                  <circle cx="15" cy="12" r="1"></circle>
+                  <path d="M7.5 7.5c3.5-1 5.5-1 9 0 1.5 3 2 7 1.5 10-2.5 1-4.5 1-6 0-1.5 1-3.5 1-6 0-.5-3 0-7 1.5-10z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Legal & Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Student Explorer Technologies India. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <button type="button" class="legal-link-btn" id="privacyPolicyBtn">Privacy Policy</button>
+          <span aria-hidden="true">&middot;</span>
+          <button type="button" class="legal-link-btn" id="termsBtn">Terms &amp; Conditions</button>
+          <span aria-hidden="true">&middot;</span>
+          <button type="button" class="legal-link-btn" id="campusAmbassadorBtn">Campus Ambassador Program</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       9. MODALS & POPUPS
+       Place details modal, Auth modal, and Legal text modal
+       ============================================================ -->
+
+  <!-- Modal 1: Place Details Modal -->
+  <div class="modal-backdrop" id="placeDetailsModal" aria-hidden="true" role="dialog" aria-labelledby="modalPlaceTitle">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="closePlaceModalBtn" aria-label="Close details modal">&times;</button>
+      
+      <div class="modal-header-image" id="modalImageContainer">
+        <img id="modalPlaceImg" src="" alt="" class="modal-img" />
+        <p id="modalPhotoCredit" class="photo-credit" style="display:none"></p>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-tag-row">
+          <span id="modalPlaceCategory" class="modal-category"></span>
+          <span id="modalPlaceLocation" class="modal-location"></span>
+        </div>
+
+        <h3 id="modalPlaceTitle" class="modal-title"></h3>
+        <p id="modalPlaceDescription" class="modal-text"></p>
+
+        <!-- Distance & Commute Estimate Banner -->
+        <div class="modal-distance-strip">
+          <div class="modal-dist-item">
+            <span class="modal-dist-icon">📍</span>
+            <div>
+              <span class="modal-dist-label">Distance from your location:</span>
+              <strong class="modal-dist-highlight" id="modalDistanceHighlight">4.5 km away</strong>
+              <span class="modal-origin-crumb">from <span id="modalOriginCrumbName">Koramangala</span></span>
+            </div>
+          </div>
+          <div class="modal-dist-item text-right">
+            <span class="modal-eta-tag" id="modalEtaEstimate">~12–18 mins commute</span>
+          </div>
+        </div>
+
+        <div class="modal-quick-info">
+          <div class="modal-info-box">
+            <span class="info-label">Indicative Student Budget</span>
+            <span id="modalPlaceBudget" class="info-value font-highlight"></span>
+          </div>
+          <div class="modal-info-box">
+            <span class="info-label">Nearest Namma Metro</span>
+            <span id="modalPlaceMetro" class="info-value"></span>
+          </div>
+          <div class="modal-info-box">
+            <span class="info-label">Best Visiting Time</span>
+            <span id="modalPlaceTime" class="info-value"></span>
+          </div>
+        </div>
+
+        <div class="modal-tip-box">
+          <strong>Student Insider Tip:</strong>
+          <span id="modalPlaceTip"></span>
+        </div>
+
+        <!-- Google Maps Directions Section -->
+        <div class="modal-directions-card" id="modalDirectionsCard">
+          <div class="modal-directions-header">
+            <div class="directions-title-group">
+              <span class="directions-kicker">🗺️ Google Maps Directions</span>
+              <h4 class="directions-heading">Navigate to <span id="modalDirectionsDestName">Place</span></h4>
+              <p class="directions-subtext">Route calculated starting from: <strong id="modalOriginNameDisplay">Koramangala</strong></p>
+            </div>
+            <a id="modalExternalGmapsLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm gmaps-direct-btn">
+              <span>Open directions</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="travel-mode-pills-row">
+            <span class="mode-label">Mode:</span>
+            <div class="travel-mode-buttons" id="modalTravelModeButtons">
+              <button type="button" class="mode-pill active" data-mode="transit">🚇 Transit</button>
+              <button type="button" class="mode-pill" data-mode="two-wheeler">🏍️ Two-Wheeler</button>
+              <button type="button" class="mode-pill" data-mode="driving">🚗 Driving</button>
+              <button type="button" class="mode-pill" data-mode="walking">🚶 Walking</button>
+            </div>
+          </div>
+
+          <!-- Embedded Map Route Preview -->
+          <div class="map-embed-wrapper" id="modalMapEmbedWrapper">
+            <iframe 
+              id="modalMapIframe" 
+              class="map-iframe"
+              title="Google Maps route to the place"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src=""
+            ></iframe>
+            <div class="map-loading-placeholder" id="mapLoadingPlaceholder">
+              <span>🗺️ Loading map...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Reviews & Ratings Section -->
+        <div class="modal-reviews-section" id="modalReviewsSection">
+          <div class="reviews-header-strip">
+            <div>
+              <h4 class="reviews-title">Student Reviews &amp; Ratings</h4>
+              <p class="reviews-subtext">Real spending reports and recommendations from the community.</p>
+            </div>
+            <div class="reviews-score-badge">
+              <span class="score-stars">★</span>
+              <span class="score-number" id="modalAvgScore">4.8</span>
+              <span class="score-count" id="modalReviewsCount">(24 reviews)</span>
+            </div>
+          </div>
+
+          <!-- Toggle Button to write review -->
+          <div class="add-review-toggle-row">
+            <button type="button" class="btn btn-outline btn-sm" id="toggleReviewFormBtn">
+              <span>✍️ Write a Student Review</span>
+            </button>
+          </div>
+
+          <!-- Review Submission Form -->
+          <form id="addReviewForm" class="add-review-form" style="display: none;">
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="reviewAuthorName" class="form-label">Your Name *</label>
+                <input type="text" id="reviewAuthorName" class="calc-input" placeholder="e.g. Rahul Sharma" required />
+              </div>
+              <div class="form-group">
+                <label for="reviewCollegeName" class="form-label">College or workplace <span class="optional-tag">optional</span></label>
+                <input type="text" id="reviewCollegeName" class="calc-input" placeholder="Leave blank if you're not in college" />
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label class="form-label">Your Rating (1–5, decimals ok)</label>
+                <div class="star-rating-selector" id="starRatingSelector">
+                  <button type="button" class="star-pick active" data-val="1">★</button>
+                  <button type="button" class="star-pick active" data-val="2">★</button>
+                  <button type="button" class="star-pick active" data-val="3">★</button>
+                  <button type="button" class="star-pick active" data-val="4">★</button>
+                  <button type="button" class="star-pick active" data-val="5">★</button>
+                  <input type="hidden" id="selectedStarRating" value="5" />
+                  <input type="number" id="manualRatingInput" class="calc-input manual-rating-input" min="1" max="5" step="0.1" value="4.5" title="Type any rating e.g. 4.3" />
+                  <span class="rating-label-hint" id="ratingLabelHint">Type 4.3 or tap stars</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="reviewCostSpent" class="form-label">What did you spend? (₹ / student) *</label>
+                <div class="rupee-input-wrapper">
+                  <span class="rupee-symbol">₹</span>
+                  <input type="number" id="reviewCostSpent" class="calc-input" placeholder="e.g. 150" min="0" step="10" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reviewHighlight" class="form-label">Recommended Dishes / Outing Highlight</label>
+              <input type="text" id="reviewHighlight" class="calc-input" placeholder="e.g. Ghee Butter Masala Dosa, Bamboo Grove corner" />
+            </div>
+
+            <div class="form-group">
+              <label for="reviewComment" class="form-label">Your Review &amp; Student Tips *</label>
+              <textarea id="reviewComment" class="calc-input textarea-input" rows="3" placeholder="Share honest insights: crowd peak hours, metro tips, best things to order, student discounts..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="reviewPhotoInput" class="form-label">Photo from your outing (optional)</label>
+              <input type="file" id="reviewPhotoInput" class="calc-input" accept="image/*" />
+              <p class="form-helper" style="margin-top:.3rem;font-size:.75rem">JPG/PNG from your phone. Shown with your review after you click <strong>Post Verified Review</strong>.</p>
+              <div id="reviewPhotoPreview" class="review-photo-preview" style="display:none;margin-top:.5rem"></div>
+            </div>
+            <div class="review-form-actions">
+              <button type="submit" class="btn btn-primary btn-sm" id="submitReviewBtn">Post Verified Review</button>
+              <button type="button" class="btn btn-ghost btn-sm" id="cancelReviewBtn">Cancel</button>
+            </div>
+          </form>
+
+          <!-- Reviews List Feed -->
+          <div class="modal-reviews-list" id="modalReviewsList">
+            <!-- Dynamically populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-primary" id="savePlaceBookmarkBtn">Save to My Squad List</button>
+          <button type="button" class="btn btn-outline" id="sharePlaceWhatsAppBtn">Share on WhatsApp</button>
+          <button type="button" class="btn btn-outline" id="copyPlaceLinkBtn">Share / Copy Link</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="reportPlaceIssueBtn">Report wrong pin / address / photo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Upload New Place / Restaurant Modal -->
+  <div class="modal-backdrop" id="uploadPlaceModal" aria-hidden="true" role="dialog" aria-labelledby="uploadPlaceModalTitle">
+    <div class="modal-container modal-lg">
+      <button type="button" class="modal-close-btn" id="closeUploadPlaceModalBtn" aria-label="Close upload modal">&times;</button>
+      
+      <div class="modal-content">
+        <div class="modal-header-badge">
+          <span class="badge-tag">🎓 Student Community Submission</span>
+          <h3 id="uploadPlaceModalTitle" class="modal-title">Share a Student Spot in Bengaluru</h3>
+          <p class="modal-subtitle">Found an affordable cafe, secret picnic lawn, or street-food gem? Add it to help thousands of college students explore within budget.</p>
+        </div>
+
+        <form id="uploadPlaceForm" class="upload-place-form">
+          <p class="form-helper" style="margin:0 0 1rem;color:#64748B;">Only <strong>name</strong> and <strong>area</strong> are required. Everything else is optional — fill what you know.</p>
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label for="newPlaceName" class="form-label">Place / Restaurant Name *</label>
+              <input type="text" id="newPlaceName" class="calc-input" placeholder="e.g. Brahmin's Coffee Bar, Airlines Hotel, Rasta Cafe" required />
+              <span class="form-helper" id="autoFillStatus" role="status" style="display:none;margin-top:.35rem"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="newPlaceCategory" class="form-label">Category</label>
+              <select id="newPlaceCategory" class="calc-input select-input">
+                <option value="food">Cafes &amp; Restaurants</option>
+                <option value="nature">Parks &amp; Nature</option>
+                <option value="attractions">Tourist Attractions</option>
+                <option value="entertainment">Entertainment &amp; Hangouts</option>
+                <option value="getaways">Weekend Getaways</option>
+                <option value="custom">✏️ Custom (type your own)…</option>
+              </select>
+              <input type="text" id="newPlaceCustomCategory" class="calc-input" style="display:none;margin-top:.5rem" maxlength="40" placeholder="Your category, e.g. Rooftop Views, Thrift Markets, Gaming Cafes" />
+            </div>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label for="newPlaceArea" class="form-label">Area / Locality in Bengaluru *</label>
+              <div class="location-input-stack">
+                <div class="location-input-row">
+                  <input type="text" id="newPlaceArea" class="calc-input" placeholder="e.g. Shankarpuram, Koramangala 5th Block, Basavanagudi" required />
+                  <div class="location-gps-slot">
+                    <button type="button" class="btn-detect-gps" id="newPlaceCurrentLocBtn" title="Set spot location from where you are right now">
+                      <span class="gps-pulse-dot"></span>
+                      <span id="newPlaceGpsBtnText">Use current location</span>
+                    </button>
+                  </div>
+                </div>
+                <input type="hidden" id="newPlaceLat" value="" />
+                <input type="hidden" id="newPlaceLng" value="" />
+                <span class="form-helper" id="newPlaceLocFeedback" style="display: none; font-size: 0.75rem; color: #059669; font-weight: 600;"></span>
+                <button type="button" class="btn btn-outline btn-sm" id="newPlacePinBtn" style="margin-top:.45rem">Pin this area on the map</button>
+                <iframe id="newPlaceMapPreview" class="pin-map" title="Map preview of this place" hidden></iframe>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="newPlaceMetro" class="form-label">Nearest Metro / Bus Stop <span class="optional-tag">optional</span></label>
+              <input type="text" id="newPlaceMetro" class="calc-input" placeholder="e.g. National College Metro (500m) — skip if unsure" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Typical student spend (₹ / person) <span class="optional-tag">optional</span></label>
+            <p class="budget-suggest-hint" id="budgetSuggestHint">For restaurants you often can’t know a hard max bill — pick a typical range or leave blank.</p>
+            <div class="budget-suggest-chips" id="budgetSuggestChips" role="group" aria-label="Suggested budgets"></div>
+            <div class="budget-range-input-row" style="margin-top:.55rem">
+              <div class="rupee-input-wrapper">
+                <span class="rupee-symbol">₹</span>
+                <input type="number" id="newPlaceMinBudget" class="calc-input" placeholder="From (e.g. 80)" min="0" step="10" />
+              </div>
+              <span class="range-divider">to</span>
+              <div class="rupee-input-wrapper">
+                <span class="rupee-symbol">₹</span>
+                <input type="number" id="newPlaceMaxBudget" class="calc-input" placeholder="Around (optional)" min="0" step="10" />
+              </div>
+            </div>
+            <span class="form-helper" style="display:block;margin-top:.35rem;font-size:.75rem;color:#64748B;">Leave max empty if you’re not sure — we’ll treat it as a soft estimate, not a fixed bill.</span>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label for="newPlaceBestTime" class="form-label">Best Time to Visit <span class="optional-tag">optional</span></label>
+              <input type="text" id="newPlaceBestTime" class="calc-input" placeholder="e.g. Early morning 7 AM – 9 AM, Evening 6 PM" />
+            </div>
+            <div class="form-group">
+              <label for="newPlaceEntryFee" class="form-label">Entry / Ticket Fee <span class="optional-tag">optional</span></label>
+              <div class="rupee-input-wrapper"><span class="rupee-symbol">₹</span><input type="number" id="newPlaceEntryFee" class="calc-input" min="0" step="5" placeholder="0 if free" /></div>
+            </div>
+          </div>
+
+          <div class="form-group famous-box" id="famousBox">
+            <label for="newPlaceFamous" class="form-label">What is this place famous for? <span class="optional-tag">optional</span></label>
+            <input type="text" id="newPlaceFamous" class="calc-input" maxlength="200" placeholder="e.g. Butter masala dosa, sunrise views, thrift books, live music nights" />
+            <span class="form-helper" id="famousHint" style="display:none">📍 Location locked. Tell students what makes this spot special.</span>
+          </div>
+
+          <!-- Photo Section -->
+          <div class="form-group">
+            <label class="form-label">Place photo <span class="optional-tag">optional</span></label>
+            <p class="form-helper">Upload a photo of the place. If you skip it, we automatically look up the details and a real picture for you — no extra clicks. If none exists, the card stays without an image; we never paste an unrelated photo.</p>
+            <div class="photo-input-section">
+              <div class="file-dropzone" id="photoDropzone">
+                <input type="file" id="newPlacePhotoFile" accept="image/*" class="file-input-hidden" />
+                <label for="newPlacePhotoFile" class="file-dropzone-label">
+                  <span class="dropzone-icon">📷</span>
+                  <span class="dropzone-text">Click to upload photo from your device</span>
+                  <span class="dropzone-sub">PNG, JPG, WebP supported</span>
+                </label>
+              </div>
+              <div class="photo-preview-box" id="photoPreviewBox" style="display: none;">
+                <img id="photoPreviewImg" src="" alt="Place Preview" />
+                <button type="button" class="btn btn-ghost btn-sm" id="removePhotoBtn">Remove photo</button>
+              </div>
+              <p class="form-helper" id="autoPhotoCredit" style="display:none"></p>
+              <div class="admin-photo-preview-row" id="autoPhotoChoices"></div>
+            </div>
+
+            <!-- Preset covers -->
+            <div class="preset-covers-row">
+              <span class="preset-label">Or choose an aesthetic cover:</span>
+              <div class="preset-cover-chips" id="presetCoverChips">
+                <button type="button" class="preset-cover-chip" data-img="/src/assets/images/vv_puram_food_street_1794295762371.jpg">Dosa / Street Food</button>
+                <button type="button" class="preset-cover-chip" data-img="/src/assets/images/cubbon_park_greenery_1794295761517.jpg">Green Park</button>
+                <button type="button" class="preset-cover-chip" data-img="/src/assets/images/lalbagh_glasshouse_1794295760242.jpg">Heritage Garden</button>
+                <button type="button" class="preset-cover-chip" data-img="/src/assets/images/bengaluru_palace_facade_1794295762175.jpg">Historic Palace</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="newPlaceDescription" class="form-label">Place Description <span class="optional-tag">optional</span></label>
+            <textarea id="newPlaceDescription" class="calc-input textarea-input" rows="2" placeholder="Atmosphere, crowd, what students like… (optional)"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="newPlaceTip" class="form-label">Student Saving Tip <span class="optional-tag">optional</span></label>
+            <input type="text" id="newPlaceTip" class="calc-input" placeholder="e.g. Student ID discount, best combo to order" />
+          </div>
+
+          <!-- Optional rating -->
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label for="newPlaceSubmitter" class="form-label">Your Name &amp; College <span class="optional-tag">optional</span></label>
+              <input type="text" id="newPlaceSubmitter" class="calc-input" placeholder="Filled from your account if logged in" />
+            </div>
+
+            <div class="form-group">
+              <label for="newPlaceInitialRating" class="form-label">Your Rating <span class="optional-tag">optional</span></label>
+              <input type="number" id="newPlaceInitialRating" class="calc-input" min="1" max="5" step="0.1" value="4.5" placeholder="e.g. 4.3" />
+              <span class="form-helper" style="display:block;margin-top:.3rem;font-size:.75rem;color:#64748B;">Any score from 1.0 to 5.0 (e.g. 3.7, 4.2)</span>
+            </div>
+          </div>
+
+          <!-- Live budget & transit estimate (calculated on the backend) -->
+          <div class="live-estimate-panel" id="liveEstimatePanel" aria-live="polite">
+            <p class="lep-title">💡 Auto budget prediction for this spot</p>
+            <div class="lep-grid">
+              <div class="lep-ways">
+                <h5>Possible ways to go</h5>
+                <ul id="lepWaysList">
+                  <li><span>Fill location & budget to see options</span><span>—</span></li>
+                </ul>
+              </div>
+              <div class="lep-budget">
+                <h5>Expected charges (per person, round trip)</h5>
+                <div class="lep-budget-row" id="lepBudgetRow">
+                  <div><em>Lean</em><strong id="lepLean">—</strong></div>
+                  <div class="mid"><em>Typical</em><strong id="lepTypical">—</strong></div>
+                  <div><em>Comfy</em><strong id="lepComfy">—</strong></div>
+                </div>
+              </div>
+            </div>
+            <p class="lep-note" id="lepNote">Based on distance, entry fee and your budget range. Fares are estimates calculated from your start point.</p>
+          </div>
+
+          <div class="form-group" id="photoAskBox" style="display:none;padding:.9rem 1rem;border:1.5px solid #CBD5E1;border-radius:12px;background:#F8FAFC;" role="alert">
+            <p class="form-label" style="margin:0 0 .35rem">📷 Want to upload a photo of this place first?</p>
+            <p class="form-helper" style="margin:0 0 .65rem">A photo from you is the best. If you skip, we'll fill in the details and find a real picture automatically.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+              <button type="button" class="btn btn-primary btn-sm" id="photoAskUploadBtn">Upload photo</button>
+              <button type="button" class="btn btn-outline btn-sm" id="photoAskSkipBtn">Skip — find it for me</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitNewPlaceBtn">
+            <span id="submitNewPlaceText">Publish Place to Student Explorer</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft location permission prompt (shown once if GPS not yet granted) -->
+  <div class="location-prompt-banner" id="locationPromptBanner" role="dialog" aria-labelledby="lpbTitle" aria-hidden="true">
+    <div class="lpb-icon" aria-hidden="true">📍</div>
+    <div class="lpb-body">
+      <p class="lpb-title" id="lpbTitle">Find places near you</p>
+      <p class="lpb-text">Allow location access so we can sort nearby spots by distance and show accurate transit budgets.</p>
+    </div>
+    <div class="lpb-actions">
+      <button type="button" class="btn btn-primary btn-sm" id="lpbAllowBtn">Allow location</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="lpbDismissBtn" style="color:#94A3B8;">Not now</button>
+    </div>
+  </div>
+
+  <!-- Modal 2: Login & Sign Up Modal -->
+  <div class="modal-backdrop" id="authModal" aria-hidden="true" role="dialog" aria-labelledby="authModalTitle">
+    <div class="modal-container modal-sm">
+      <button type="button" class="modal-close-btn" id="closeAuthModalBtn" aria-label="Close login modal">&times;</button>
+      
+      <div class="modal-content auth-modal-content">
+        <div class="auth-icon-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+
+        <h3 id="authModalTitle" class="modal-title text-center">Welcome to Student Explorer</h3>
+        <p class="modal-text text-center text-muted" id="authSubtitle">Create an account first. After that, log in with the same email and password. College is optional.</p>
+
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab" id="authTabLogin" role="tab">Log In</button>
+          <button type="button" class="auth-tab active" id="authTabSignup" role="tab">Sign Up</button>
+        </div>
+
+        <form id="authForm" class="auth-form" novalidate>
+          <div class="form-group signup-only">
+            <label for="authName" class="form-label">Your Name</label>
+            <input type="text" id="authName" class="calc-input" placeholder="e.g. Vivek" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="collegeEmail" class="form-label">Email</label>
+            <input type="email" id="collegeEmail" class="calc-input" placeholder="you@email.com" autocomplete="email" required />
+          </div>
+          <div class="form-group signup-only">
+            <label for="collegeName" class="form-label">College or workplace <span class="optional-tag">optional</span></label>
+            <input type="text" id="collegeName" class="calc-input" placeholder="Not required — visitors outside college are welcome" />
+          </div>
+          <div class="form-group">
+            <label for="authPassword" class="form-label">Password</label>
+            <input type="password" id="authPassword" class="calc-input" placeholder="At least 8 characters" autocomplete="new-password" required minlength="8" />
+            <span class="form-helper">You can use a password someone else also uses. Once this account exists, log in with this email and password.</span>
+          </div>
+          <div id="authError" class="auth-error" role="alert" style="display:none"></div>
+          <button type="submit" class="btn btn-primary btn-block" id="authSubmitBtn">Create Account</button>
+          <p class="form-helper auth-consent">By continuing you agree to our <a href="/terms.html" target="_blank" rel="noopener">Terms</a> and <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Policy & Info Modal -->
+  <div class="modal-backdrop" id="legalModal" aria-hidden="true" role="dialog" aria-labelledby="legalModalTitle">
+    <div class="modal-container modal-md">
+      <button type="button" class="modal-close-btn" id="closeLegalModalBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-content">
+        <h3 id="legalModalTitle" class="modal-title">Student Explorer Policy</h3>
+        <div id="legalModalBody" class="legal-body-text">
+          <!-- Dynamically filled by JavaScript -->
+        </div>
+        <button type="button" class="btn btn-outline" id="closeLegalBtnAction">Got It</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report a wrong pin / address / photo (with photo upload, address and GPS) -->
+  <div class="modal-backdrop" id="reportModal" aria-hidden="true" role="dialog" aria-labelledby="reportModalTitle">
+    <div class="modal-container modal-md">
+      <button type="button" class="modal-close-btn" id="closeReportModalBtn" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <h3 id="reportModalTitle" class="modal-title">Report a problem with this place</h3>
+        <p class="form-helper" id="reportPlaceName" style="margin-top:0"></p>
+        <form id="reportForm" novalidate>
+          <div class="rp-kinds" role="radiogroup" aria-label="What is wrong?">
+            <label class="rp-kind"><input type="radio" name="reportKind" value="wrong_pin" checked><span>📍 Wrong map pin</span></label>
+            <label class="rp-kind"><input type="radio" name="reportKind" value="wrong_address"><span>🏠 Wrong address</span></label>
+            <label class="rp-kind"><input type="radio" name="reportKind" value="wrong_photo"><span>🖼️ Wrong photo</span></label>
+            <label class="rp-kind"><input type="radio" name="reportKind" value="other"><span>💬 Something else</span></label>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reportAddress">Correct address or landmark <small>(optional)</small></label>
+            <input type="text" id="reportAddress" class="form-input" maxlength="240" placeholder="e.g. 80 Feet Road, near Sony Signal, Koramangala" autocomplete="street-address">
+            <p class="form-helper">We look this address up on the map and suggest it as the new pin.</p>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-outline btn-sm" id="reportGpsBtn">📡 I am at this place: use my location as the pin</button>
+            <p class="form-helper" id="reportGpsStatus" aria-live="polite"></p>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reportNote">What should be fixed? <small>(optional)</small></label>
+            <textarea id="reportNote" class="form-input" rows="3" maxlength="500" placeholder="e.g. The pin is on the main road but the entrance is on the back lane."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reportPhoto">Photo as proof <small>(optional, JPG or PNG)</small></label>
+            <input type="file" id="reportPhoto" accept="image/png,image/jpeg,image/webp">
+            <img id="reportPhotoPreview" alt="Preview of the photo you chose" style="display:none;max-width:100%;max-height:160px;margin-top:.5rem;border-radius:10px">
+          </div>
+          <p class="form-error" id="reportError" role="alert" style="display:none"></p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <button type="submit" class="btn btn-primary" id="reportSubmitBtn">Send report</button>
+            <button type="button" class="btn btn-ghost" id="reportCancelBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weekend motivation (shown on Saturdays and Sundays only) -->
+  <div class="modal-backdrop" id="weekendModal" aria-hidden="true" role="dialog" aria-labelledby="weekendTitle">
+    <div class="modal-container modal-md weekend-card">
+      <button type="button" class="modal-close-btn" id="closeWeekendBtn" aria-label="Close">&times;</button>
+      <div class="modal-content" style="text-align:center">
+        <div class="weekend-emoji" id="weekendEmoji" aria-hidden="true">🌄</div>
+        <h3 id="weekendTitle" class="modal-title">It is the weekend. Go explore Bengaluru!</h3>
+        <p id="weekendText" class="form-helper" style="font-size:1rem"></p>
+        <div class="weekend-picks" id="weekendPicks" aria-live="polite" style="text-align:left"></div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-top:1rem">
+          <button type="button" class="btn btn-primary" id="weekendSquadBtn">Plan a squad trip</button>
+          <button type="button" class="btn btn-outline" id="weekendPlacesBtn">Find places near me</button>
+          <button type="button" class="btn btn-ghost" id="weekendLaterBtn">Maybe later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Squad invitation (opened from a WhatsApp link ?squad=CODE) -->
+  <div class="modal-backdrop" id="squadJoinModal" aria-hidden="true" role="dialog" aria-labelledby="squadJoinTitle">
+    <div class="modal-container modal-md">
+      <button type="button" class="modal-close-btn" id="closeSquadJoinBtn" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <h3 id="squadJoinTitle" class="modal-title">You are invited to a squad trip</h3>
+        <div id="squadJoinBody" class="form-helper"></div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+          <button type="button" class="btn btn-primary" id="squadJoinConfirmBtn">Join this squad</button>
+          <button type="button" class="btn btn-ghost" id="squadJoinCancelBtn">Not now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Modal (admin accounts only) -->
+  <!-- ============================================================
+       PROFILE CENTRE: overview, live rank, badges, saved trips
+       ============================================================ -->
+  <div class="modal-backdrop" id="profileModal" aria-hidden="true" role="dialog" aria-labelledby="profileModalTitle">
+    <div class="modal-container modal-lg profile-modal">
+      <button type="button" class="modal-close-btn" id="closeProfileModalBtn" aria-label="Close profile">&times;</button>
+      <div class="modal-content">
+        <header class="pf-hero">
+          <div class="pf-avatar" id="pfAvatar" aria-hidden="true">S</div>
+          <div class="pf-id">
+            <h3 id="profileModalTitle">Your profile</h3>
+            <span id="pfEmail"></span>
+            <small id="pfCollege"></small>
+          </div>
+          <div class="pf-level">
+            <span class="pf-level-name" id="pfLevelName">Newbie</span>
+            <strong id="pfXp">0 XP</strong>
+            <div class="xp-track"><i id="pfXpBar" style="width:0"></i></div>
+            <small id="pfNext"></small>
+          </div>
+        </header>
+        <div class="pf-tabs" role="tablist" aria-label="Profile sections">
+          <button type="button" class="pf-tab active" role="tab" data-pf-tab="overview">Overview</button>
+          <button type="button" class="pf-tab" role="tab" data-pf-tab="rank">🏆 Rank</button>
+          <button type="button" class="pf-tab" role="tab" data-pf-tab="badges">🏅 Badges</button>
+          <button type="button" class="pf-tab" role="tab" data-pf-tab="trips">🧳 Saved trips</button>
+        </div>
+        <section class="pf-pane" id="pfPaneOverview" role="tabpanel">
+          <div class="pf-stats" id="pfStats"></div>
+          <h4 class="pf-h">Your showcase badges</h4>
+          <div class="pf-showcase" id="pfShowcase"></div>
+          <div class="pf-actions">
+            <button type="button" class="btn btn-outline btn-sm" id="pfGoRank">🏆 See my rank</button>
+            <button type="button" class="btn btn-outline btn-sm" id="pfGoCollection">🏅 Open full badge collection</button>
+            <button type="button" class="btn btn-ghost btn-sm pf-logout" id="pfLogoutBtn">Log out</button>
+          </div>
+        </section>
+        <section class="pf-pane" id="pfPaneRank" role="tabpanel" hidden></section>
+        <section class="pf-pane" id="pfPaneBadges" role="tabpanel" hidden></section>
+        <section class="pf-pane" id="pfPaneTrips" role="tabpanel" hidden></section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="adminModal" aria-hidden="true" role="dialog" aria-labelledby="adminModalTitle">
+    <div class="modal-container modal-lg">
+      <button type="button" class="modal-close-btn" id="closeAdminModalBtn" aria-label="Close admin panel">&times;</button>
+      <div class="modal-content">
+        <div class="modal-header-badge">
+          <span class="badge-tag">🔒 Admin only</span>
+          <h3 id="adminModalTitle" class="modal-title">Admin Dashboard</h3>
+          <p class="modal-subtitle">Full control: users, analytics, places, comments, ratings, and recommendations.</p>
+        </div>
+
+        <div class="admin-stats-grid" id="adminStatsGrid">
+          <div class="admin-stat-card"><span class="as-label">Signed up</span><span class="as-value" id="adminStatUsers">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Active this week</span><span class="as-value" id="adminStatActive">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Places listed</span><span class="as-value" id="adminStatPlaces">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Trips logged</span><span class="as-value" id="adminStatTrips">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Reviews</span><span class="as-value" id="adminStatReviews">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Total spent (all)</span><span class="as-value" id="adminStatSpent">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Avg / head</span><span class="as-value" id="adminStatAvg">—</span></div>
+          <div class="admin-stat-card"><span class="as-label">Recommended</span><span class="as-value" id="adminStatHotels">—</span></div>
+        </div>
+
+        <div class="admin-tabs">
+          <button type="button" class="admin-tab active" data-admin-tab="users">Users</button>
+          <button type="button" class="admin-tab" data-admin-tab="analytics">Analytics</button>
+          <button type="button" class="admin-tab" data-admin-tab="places">Places</button>
+          <button type="button" class="admin-tab" data-admin-tab="comments">Comments</button>
+          <button type="button" class="admin-tab" data-admin-tab="hotel">Recommend</button>
+          <button type="button" class="admin-tab" data-admin-tab="rankings">🏆 Rankings</button>
+          <button type="button" class="admin-tab" data-admin-tab="promos">📣 Promotions</button>
+          <button type="button" class="admin-tab" data-admin-tab="welcome">🎬 Opening cards</button>
+          <button type="button" class="admin-tab" data-admin-tab="feedback">💬 Feedback <span class="fb-tab-badge" id="adminFeedbackBadge" hidden>0</span></button>
+        </div>
+
+        <div class="admin-pane" id="adminPaneUsers">
+          <div class="admin-users-table-wrap">
+            <table class="admin-users-table" id="adminUsersTable">
+              <thead>
+                <tr><th>Name</th><th>Email &amp; badges</th><th>XP</th><th>College</th><th>Trips</th><th>Joined</th><th>Last active</th></tr>
+              </thead>
+              <tbody id="adminUsersBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneAnalytics" style="display:none">
+          <p class="form-helper" style="margin-bottom:.75rem">Automatic data analysis from real student outings and reviews. Refresh opens live numbers.</p>
+          <div id="adminAnalyticsBody" class="admin-analytics-body">
+            <p style="color:#64748B">Open this tab to load analytics…</p>
+          </div>
+        </div>
+
+        <div class="admin-pane" id="adminPanePlaces" style="display:none">
+          <p class="form-helper" style="margin-bottom:.75rem">Manage every place. Edit details, photos, rating, feature or delete. <strong>Merge</strong> folds a duplicate place into another (keeps the target, moves photos/reviews from the source, then removes the source). Built-in starter places stay until replaced by DB entries.</p>
+          <div class="admin-report-queue" style="margin:1rem 0">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap">
+              <strong>Community accuracy reports</strong>
+              <button type="button" class="btn btn-outline btn-sm" id="refreshPlaceReportsBtn">Refresh reports</button>
+            </div>
+            <div id="adminPlaceReports" class="form-helper" style="margin-top:.5rem">Loading reports…</div>
+          </div>
+          <div class="admin-users-table-wrap">
+            <table class="admin-users-table" id="adminPlacesTable">
+              <thead>
+                <tr><th>Name</th><th>Added by</th><th>Category</th><th>Rating</th><th>Budget</th><th>Flags</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="adminPlacesBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneRankings" style="display:none">
+          <div class="rk-admin-head">
+            <div>
+              <strong>Student leaderboard</strong>
+              <p class="form-helper">Ranked by XP, then badges. Rankings publish automatically: students always see the current top 10 and their own place, and it changes as XP changes.</p>
+            </div>
+            <div class="rk-admin-actions">
+              <label class="rk-select-label">Show
+                <select id="rkLimit" class="calc-input"><option value="10" selected>Top 10</option><option value="25">Top 25</option><option value="50">Top 50</option><option value="100">Top 100</option></select>
+              </label>
+              <button type="button" class="btn btn-outline btn-sm" id="rkRefreshBtn">↻ Refresh</button>
+              <button type="button" class="btn btn-primary btn-sm" id="rkPublishBtn">⚡ Update now</button>
+            </div>
+          </div>
+          <div class="rk-status" id="rkStatus" aria-live="polite">Loading…</div>
+          <div class="rk-admin-toggles">
+            <label class="rk-toggle"><input type="checkbox" id="rkAuto" checked> <span>Auto-refresh this list every 15 s</span></label>
+            <label class="rk-toggle"><input type="checkbox" id="rkLive"> <span>Live mode (on by default): students always see the current ranking automatically</span></label>
+            <button type="button" class="btn btn-ghost btn-sm" id="rkHideBtn" style="color:#DC2626">Hide from students</button>
+          </div>
+          <div class="admin-users-table-wrap">
+            <table class="admin-users-table rk-table" id="rkTable">
+              <thead><tr><th>#</th><th>Student</th><th>Level</th><th>XP</th><th>Badges</th></tr></thead>
+              <tbody id="rkBody"><tr><td colspan="5">Open this tab to load the ranking…</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneWelcome" style="display:none">
+          <p class="form-helper" style="margin-bottom:.6rem">The places you add here pop up for visitors when they open the site (once per visit). <strong>Add none and nothing pops up</strong>; the site just loads normally. Up to 6 are shown at a time.</p>
+          <form id="welcomeForm" class="promo-form" novalidate>
+            <div class="promo-grid">
+              <label class="calc-mini"><span>Place</span><select id="welcomePlace" class="calc-input" required><option value="">Choose a place…</option></select></label>
+              <fieldset class="calc-mini promo-places"><span>Label on the card</span>
+                <label class="calc-check"><input type="radio" name="welcomeKind" value="sponsored" checked /> Sponsored <small>(paid shop)</small></label>
+                <label class="calc-check"><input type="radio" name="welcomeKind" value="highlight" /> Highlight <small>(your pick, not paid)</small></label>
+              </fieldset>
+              <label class="calc-mini promo-wide"><span>Short line on the card <small>(optional, e.g. "Free chai with any snack")</small></span><input type="text" id="welcomeHeadline" class="calc-input" maxlength="80" /></label>
+              <label class="calc-mini"><span>Show from <small>(optional)</small></span><input type="date" id="welcomeStart" class="calc-input" /></label>
+              <label class="calc-mini"><span>Remove automatically after <small>(optional)</small></span><input type="date" id="welcomeEnd" class="calc-input" /></label>
+            </div>
+            <div class="promo-actions">
+              <button type="submit" class="btn btn-primary" id="welcomeSave">Add card</button>
+              <button type="button" class="btn btn-outline" id="welcomePreview">👁 Preview the popup</button>
+              <span id="welcomeMsg" class="fb-error" role="status" hidden></span>
+            </div>
+          </form>
+          <h4 class="promo-list-title">Cards in the popup</h4>
+          <div id="welcomeList" class="promo-list" aria-live="polite">Loading…</div>
+        </div>
+
+        <div class="admin-pane" id="adminPanePromos" style="display:none">
+          <p class="form-helper" style="margin-bottom:.6rem">Promote a place for as long and as strongly as the shop paid for. <strong>Prices and notes are private</strong>: visitors only see a "Sponsored" label, the offer text and the better placement.</p>
+          <details class="promo-pitch">
+            <summary>📈 Plan comparison to show shopkeepers (private)</summary>
+            <div class="promo-pitch-body">
+              <table class="promo-pitch-table">
+                <thead><tr><th></th><th>Featured<br><small>7 days</small></th><th>Monthly<br><small>30 days</small></th><th>Premium<br><small>30 days</small></th></tr></thead>
+                <tbody>
+                  <tr><th>Sponsored card pinned in the places list</th><td>✅</td><td>✅</td><td>✅</td></tr>
+                  <tr><th>Offer shown on the card</th><td>—</td><td>✅</td><td>✅</td></tr>
+                  <tr><th>Appears in "Instant picks" and the weekend card</th><td>—</td><td>✅</td><td>✅</td></tr>
+                  <tr><th>Big hero card: the first thing every visitor sees</th><td>—</td><td>—</td><td>✅</td></tr>
+                  <tr><th>Homepage "Spotlight near you" with photo</th><td>—</td><td>—</td><td>✅</td></tr>
+                  <tr><th>Ranked above Monthly and Featured shops</th><td>—</td><td>—</td><td>✅</td></tr>
+                  <tr><th>Monthly performance report</th><td>—</td><td>—</td><td>✅</td></tr>
+                </tbody>
+              </table>
+              <p class="form-helper"><strong>Why Premium earns more:</strong> most students never scroll past the first screen. Premium puts the shop there, on the hero card, the homepage spotlight and the weekend card, and the monthly report shows exactly how many students saw it, opened it and tapped Directions.</p>
+              <button type="button" class="btn btn-outline btn-sm" id="promoCopyPitch">📋 Copy this as a WhatsApp message</button>
+            </div>
+          </details>
+          <form id="promoForm" class="promo-form" novalidate>
+            <input type="hidden" id="promoId" />
+            <div class="promo-grid">
+              <label class="calc-mini"><span>Place</span><select id="promoPlace" class="calc-input" required><option value="">Choose a place…</option></select></label>
+              <label class="calc-mini"><span>Plan (fills sensible defaults)</span>
+                <select id="promoTier" class="calc-input">
+                  <option value="featured">Featured · 7 days</option>
+                  <option value="monthly">Monthly · 30 days</option>
+                  <option value="premium">Premium · 30 days</option>
+                  <option value="custom">Custom</option>
+                </select></label>
+              <label class="calc-mini"><span>Strength: <b id="promoPriorityVal">50</b> / 100 <small>(higher shows first)</small></span><input type="range" id="promoPriority" min="0" max="100" step="5" value="50" /></label>
+              <fieldset class="calc-mini promo-places"><span>Where to show it</span>
+                <label class="calc-check"><input type="checkbox" value="hero" /> Big hero card (first thing visitors see)</label>
+                <label class="calc-check"><input type="checkbox" value="homepage" /> Homepage spotlight</label>
+                <label class="calc-check"><input type="checkbox" value="category_top" checked /> Top of its category / list</label>
+                <label class="calc-check"><input type="checkbox" value="discovery" /> Picks &amp; weekend card</label>
+              </fieldset>
+              <label class="calc-mini"><span>Special offer shown on the card <small>(optional)</small></span><input type="text" id="promoOffer" class="calc-input" maxlength="80" placeholder="e.g. 10% off with student ID" /></label>
+              <label class="calc-mini"><span>Starts</span><input type="date" id="promoStart" class="calc-input" /></label>
+              <label class="calc-mini"><span>Ends</span><input type="date" id="promoEnd" class="calc-input" /></label>
+              <label class="calc-mini"><span>Amount paid ₹ <small>(private)</small></span><input type="number" id="promoAmount" class="calc-input" min="0" step="50" value="0" inputmode="numeric" /></label>
+              <label class="calc-mini promo-wide"><span>Private notes <small>(contact, UPI ref, what you promised)</small></span><textarea id="promoNotes" class="calc-input textarea-input" rows="2" maxlength="500"></textarea></label>
+            </div>
+            <p class="form-helper">Every promoted place is always labelled <strong>Sponsored</strong> so students can trust the site. Promotions switch off by themselves after the end date.</p>
+            <div class="promo-actions">
+              <button type="submit" class="btn btn-primary" id="promoSave">Save promotion</button>
+              <button type="button" class="btn btn-outline" id="promoClear">Clear form</button>
+              <span id="promoMsg" class="fb-error" role="status" hidden></span>
+            </div>
+          </form>
+          <h4 class="promo-list-title">Promotions</h4>
+          <div id="promoList" class="promo-list" aria-live="polite">Loading…</div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneFeedback" style="display:none">
+          <p class="form-helper" style="margin-bottom:.6rem">Messages students send from the Feedback button. <strong>Only admins can see this tab.</strong></p>
+          <div class="fb-admin-filters" id="adminFeedbackFilters" role="group" aria-label="Filter feedback">
+            <button type="button" class="fb-pill active" data-fb-status="">All</button>
+            <button type="button" class="fb-pill" data-fb-status="new">New <span data-fb-count="new"></span></button>
+            <button type="button" class="fb-pill" data-fb-status="reviewed">Reviewed <span data-fb-count="reviewed"></span></button>
+            <button type="button" class="fb-pill" data-fb-status="done">Done <span data-fb-count="done"></span></button>
+            <button type="button" class="btn btn-outline btn-sm" id="adminFeedbackRefresh" style="margin-left:auto">↻ Refresh</button>
+          </div>
+          <div id="adminFeedbackList" class="fb-admin-list" aria-live="polite">Loading feedback…</div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneComments" style="display:none">
+          <p class="form-helper" style="margin-bottom:.75rem">Only admins can publish sample comments. They are labelled as sample notes, not as fake students.</p>
+          <form id="adminSampleForm" class="upload-place-form" style="margin-bottom:1rem">
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label class="form-label" for="samplePlace">Place</label>
+                <select id="samplePlace" class="calc-input"></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="sampleRating">Rating</label>
+                <input type="number" id="sampleRating" class="calc-input" min="1" max="5" step="0.1" value="4.5" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sampleComment">Sample comment</label>
+              <textarea id="sampleComment" class="calc-input textarea-input" rows="2" placeholder="A short, honest planning note for this place"></textarea>
+            </div>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+              <button type="submit" class="btn btn-primary btn-sm">Publish sample comment</button>
+              <button type="button" class="btn btn-outline btn-sm" id="seedSampleCommentsBtn">Add starter notes for featured places</button>
+            </div>
+          </form>
+          <div class="admin-users-table-wrap" style="max-height:380px">
+            <table class="admin-users-table">
+              <thead>
+                <tr><th>Place</th><th>Author</th><th>Rating</th><th>Comment</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="adminCommentsBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-pane" id="adminPaneHotel" style="display:none">
+          <form id="adminHotelForm" class="upload-place-form">
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label class="form-label" for="hotelName">Hotel / Stay name *</label>
+                <input type="text" id="hotelName" class="calc-input" required placeholder="e.g. Zostel Bengaluru Koramangala" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="hotelArea">Area / Locality</label>
+                <input type="text" id="hotelArea" class="calc-input" placeholder="e.g. Koramangala 5th Block (auto-filled from address if empty)" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotelAddress">Full address (paste or type)</label>
+              <textarea id="hotelAddress" class="calc-input textarea-input" rows="3" maxlength="320" placeholder="e.g. 11th Gate, Ramaiah College Rd, Mathikere Extension, Bengaluru 560054"></textarea>
+              <p class="form-helper" style="margin-top:.3rem;font-size:.75rem">Paste a full Google address, then press <strong>Find on map</strong> (Bengaluru areas). Long addresses are OK — we shorten them automatically. For places <strong>outside Bengaluru</strong>, type <strong>latitude &amp; longitude by hand</strong> below and publish — manual pins are accepted anywhere.</p>
+              <button type="button" class="btn btn-outline btn-sm" id="hotelFindBtn" style="margin-top:.4rem">📍 Find on map</button>
+              <div id="hotelCandidates" class="hotel-candidates" style="display:none;margin-top:.5rem"></div>
+            </div>
+            <div class="form-group">
+              <div class="control-label-flex">
+                <label class="form-label">Location coordinates (editable)</label>
+                <button type="button" class="btn-detect-gps" id="hotelCurrentLocBtn" title="Use your current GPS">
+                  <span class="gps-pulse-dot"></span>
+                  <span id="hotelGpsBtnText">Use current location</span>
+                </button>
+              </div>
+              <div class="form-row-2col" style="margin-top:.4rem">
+                <div class="form-group" style="margin:0">
+                  <label class="form-label" for="hotelLat">Latitude</label>
+                  <input type="number" id="hotelLat" class="calc-input" step="any" inputmode="decimal" placeholder="e.g. 13.02887" />
+                </div>
+                <div class="form-group" style="margin:0">
+                  <label class="form-label" for="hotelLng">Longitude</label>
+                  <input type="number" id="hotelLng" class="calc-input" step="any" inputmode="decimal" placeholder="e.g. 77.56158" />
+                </div>
+              </div>
+              <span class="form-helper" id="hotelLocFeedback" style="display:none;margin-top:.35rem;font-size:.75rem;color:#059669;font-weight:600;"></span>
+              <p class="form-helper" style="margin-top:.35rem;font-size:.75rem">Tip: type lat/lng yourself if Find on map struggles — those values are kept and used on publish.</p>
+              <button type="button" class="btn btn-outline btn-sm" id="hotelPinAreaBtn" style="margin-top:.5rem">Pin from address / area</button>
+              <iframe id="hotelMapPreview" class="pin-map" title="Map preview" hidden></iframe>
+            </div>
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label class="form-label" for="hotelMin">Min budget ₹ / person</label>
+                <input type="number" id="hotelMin" class="calc-input" min="0" step="50" value="500" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="hotelMax">Max budget ₹ / person</label>
+                <input type="number" id="hotelMax" class="calc-input" min="0" step="50" value="1200" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotelFamous">Why recommend this? *</label>
+              <input type="text" id="hotelFamous" class="calc-input" required maxlength="200" placeholder="e.g. Clean dorms, metro nearby, student group rates" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotelDesc">Short description</label>
+              <textarea id="hotelDesc" class="calc-input textarea-input" rows="2" placeholder="Atmosphere, who it suits, booking tips..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotelMetro">Nearest metro / bus</label>
+              <input type="text" id="hotelMetro" class="calc-input" placeholder="e.g. Trinity Metro 800m" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hotelPhotosInput">Photos from your computer</label>
+              <input type="file" id="hotelPhotosInput" accept="image/*" multiple class="calc-input" />
+              <p class="form-helper" style="margin-top:.35rem;font-size:.75rem;color:#64748B;">Select one or more images (JPG/PNG). They rotate every 3 seconds on the homepage for all users.</p>
+              <div class="admin-photo-preview-row" id="hotelPhotoPreviews"></div>
+            </div>
+            <label class="form-label" style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;cursor:pointer;">
+              <input type="checkbox" id="hotelShowInHero" checked />
+              Show in homepage featured carousel
+            </label>
+            <p class="form-helper" style="margin-bottom:.75rem">Only you (admin) can publish these. Visitors see them on the hero and under Hotels — with a <strong>Nearest to you</strong> tag when they are close.</p>
+            <button type="submit" class="btn btn-primary btn-block" id="adminHotelSubmit">Publish recommendation</button>
+          </form>
+          <div id="adminRecList" class="admin-rec-list" style="margin-top:1.25rem"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- First-visit: encourage Sign Up (no Google login) -->
+  <div class="welcome-signup-banner" id="welcomeSignupBanner" style="display:none" role="dialog" aria-labelledby="wsbTitle">
+    <div class="wsb-inner">
+      <div>
+        <strong id="wsbTitle">New here? Create a free account</strong>
+        <p>Sign up with email to save outings, post comments, and add places. No Google account needed.</p>
+      </div>
+      <div class="wsb-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="wsbSignupBtn">Sign Up</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="wsbDismissBtn">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist drawer -->
+  <div class="wishlist-drawer" id="wishlistDrawer" aria-hidden="true" hidden>
+    <div class="wishlist-drawer-panel" role="dialog" aria-labelledby="wishlistTitle">
+      <div class="wishlist-drawer-head">
+        <div>
+          <h3 id="wishlistTitle">My Wishlist</h3>
+          <p class="form-helper" style="margin:0">Places you hearted — open, plan, or remove them anytime.</p>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeWishlistBtn" aria-label="Close wishlist">&times;</button>
+      </div>
+      <div id="wishlistList" class="wishlist-list"></div>
+      <div class="wishlist-drawer-foot">
+        <button type="button" class="btn btn-outline btn-sm" id="wishlistClearBtn">Clear all</button>
+        <button type="button" class="btn btn-primary btn-sm" id="wishlistBrowseBtn">Browse places</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FEEDBACK: always-visible button (bottom-right) + form. Messages are readable by admins only (Admin > Feedback).
+       ============================================================ -->
+  <button type="button" class="feedback-fab" id="feedbackFab" data-open-feedback aria-haspopup="dialog" title="Tell us what to fix or add">
+    <span aria-hidden="true">💬</span><span class="feedback-fab-text">Feedback</span>
+  </button>
+
+  <div class="modal-backdrop" id="feedbackModal" aria-hidden="true" role="dialog" aria-labelledby="feedbackTitle">
+    <div class="modal-container modal-md">
+      <button type="button" class="modal-close-btn" id="closeFeedbackBtn" aria-label="Close feedback form">&times;</button>
+      <div class="modal-content">
+        <form id="feedbackForm" novalidate>
+          <div class="modal-header-badge">
+            <span class="badge-tag">💬 Help us improve</span>
+            <h3 id="feedbackTitle" class="modal-title">Send feedback</h3>
+            <p class="modal-subtitle">Found a bug, a wrong price or a place we're missing? Tell us — a real person reads every message.</p>
+          </div>
+
+          <fieldset class="fb-field">
+            <legend class="form-label">What is it about?</legend>
+            <div class="fb-kinds" id="feedbackKinds" role="radiogroup" aria-label="Feedback type">
+              <button type="button" class="fb-kind" role="radio" aria-checked="false" data-kind="bug">🐞 Something is broken</button>
+              <button type="button" class="fb-kind active" role="radio" aria-checked="true" data-kind="idea">💡 Idea / improvement</button>
+              <button type="button" class="fb-kind" role="radio" aria-checked="false" data-kind="place">📍 Wrong / missing place</button>
+              <button type="button" class="fb-kind" role="radio" aria-checked="false" data-kind="praise">❤️ Something I like</button>
+            </div>
+          </fieldset>
+
+          <div class="fb-field">
+            <span class="form-label" id="fbRatingLabel">How is Student Explorer for you so far? <span class="fb-opt">(optional)</span></span>
+            <div class="fb-stars" id="feedbackStars" role="radiogroup" aria-labelledby="fbRatingLabel">
+              <button type="button" role="radio" aria-checked="false" aria-label="1 star" data-star="1">★</button>
+              <button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-star="2">★</button>
+              <button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-star="3">★</button>
+              <button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-star="4">★</button>
+              <button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-star="5">★</button>
+            </div>
+          </div>
+
+          <div class="fb-field">
+            <label class="form-label" for="feedbackMessage">Your message</label>
+            <textarea id="feedbackMessage" class="calc-input textarea-input" rows="4" maxlength="2000" required placeholder="What happened, or what would you like to see? The more detail, the faster we can fix it."></textarea>
+            <div class="fb-meta"><span id="feedbackError" class="fb-error" role="alert" hidden></span><span id="feedbackCount" class="fb-count">0 / 2000</span></div>
+          </div>
+
+          <div class="fb-field">
+            <span class="form-label">Screenshot or photo <span class="fb-opt">(optional)</span></span>
+            <div class="fb-photo-row">
+              <label class="btn btn-outline btn-sm fb-photo-btn" for="feedbackPhoto">📷 Add photo</label>
+              <input type="file" id="feedbackPhoto" accept="image/jpeg,image/png,image/webp" hidden />
+              <span class="form-helper" id="feedbackPhotoHint">JPG, PNG or WebP — a screenshot of the problem helps a lot.</span>
+            </div>
+            <div class="fb-photo-preview" id="feedbackPhotoPreview" hidden>
+              <img id="feedbackPhotoImg" alt="Selected photo preview" />
+              <button type="button" class="btn btn-outline btn-sm" id="feedbackPhotoRemove">Remove</button>
+            </div>
+          </div>
+
+          <div class="fb-field" id="feedbackContactWrap">
+            <label class="form-label" for="feedbackContact">Email for a reply <span class="fb-opt">(optional)</span></label>
+            <input type="email" id="feedbackContact" class="calc-input" placeholder="you@college.edu" autocomplete="email" />
+          </div>
+
+          <p class="form-helper fb-privacy">🔒 Only the site admin can read this. We never show your feedback or photo to other students.</p>
+          <button type="submit" class="btn btn-primary btn-block" id="feedbackSubmit">Send feedback</button>
+        </form>
+
+        <div class="fb-thanks" id="feedbackThanks" hidden>
+          <div class="fb-thanks-ico" aria-hidden="true">🎉</div>
+          <h3 class="modal-title">Thank you!</h3>
+          <p class="modal-subtitle">Your feedback reached the admin. It really helps make Student Explorer better for everyone.</p>
+          <button type="button" class="btn btn-primary" id="feedbackThanksClose">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Opening cards: admin-chosen places shown when someone opens the site. Hidden when there are none. -->
+  <div class="modal-backdrop" id="welcomeCardsModal" aria-hidden="true" role="dialog" aria-labelledby="welcomeCardsTitle">
+    <div class="modal-container modal-lg welcome-cards-box">
+      <button type="button" class="modal-close-btn" id="closeWelcomeCardsBtn" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <h3 id="welcomeCardsTitle" class="modal-title">Today's spots for you</h3>
+        <p class="modal-subtitle">Handpicked student-friendly places. Tap a card for details and directions.</p>
+        <div class="welcome-cards" id="welcomeCardsRow" role="list"></div>
+        <button type="button" class="weekend-later" id="welcomeCardsSkip">Skip, show me everything</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb-lightbox" id="fbLightbox" hidden role="dialog" aria-label="Feedback photo"><button type="button" class="fb-lightbox-close" aria-label="Close photo">&times;</button><img id="fbLightboxImg" alt="Feedback photo" /></div>
+
+  <!-- Toast Notification Alert (for user feedback like copying links or saving) -->
+  <div id="toastNotification" class="toast-notification" role="status" aria-live="polite">
+    <span id="toastMessage">Notification message</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  
